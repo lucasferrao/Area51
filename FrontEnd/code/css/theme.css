@@ -10,7 +10,7 @@ body {
 	font-size: 13px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	background: #fff;
-	color: #777
+	color: #ffffff
 }
 h1, h2, h4, h5, h6 {
 	color: #333;
@@ -45,6 +45,9 @@ h5 {
 }
 h6 {
 	font-size: 11px
+}
+li {
+	font-size: 18px
 }
 strong, b {
 	color: #555
@@ -81,7 +84,7 @@ blockquote small::before {
 }
 .text-muted {color: #999;}
 .wrapper {
-	background: url(../images/bg.png) #eee;
+	background: url(../images/bg.png) #c0c0c0;
 	border-bottom: 1px solid #bbb;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -1381,7 +1384,7 @@ border-top-left-radius: 3px;
 	outline: 0
 }
 .dataTables_wrapper table th.sorting_asc, .dataTables_wrapper table th.sorting_desc {
-	background: #800000;
+	background: #80000;
 	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.1) inset;
 	box-shadow: 0 0 5px rgba(0,0,0,0.1) inset
