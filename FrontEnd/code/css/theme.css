@@ -20,7 +20,7 @@ h1, h2, h4, h5, h6 {
 h3 {
 	color: #ffffff;
 	margin-top: 0
-	horizontal-align: center;
+
 
 }
 
@@ -35,7 +35,8 @@ h2 {
 	font-size: 24px
 }
 h3 {
-	font-size: 20px
+	font-size: 20px !important;
+	text-align: center !important;
 }
 h4 {
 	font-size: 16px
