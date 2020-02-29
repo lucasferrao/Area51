@@ -41,13 +41,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="92518556-9947-4eb5-997c-116455b80148" name="Default Changelist" comment="" />
+      <changelist id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="" />
       <created>1582904139779</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582904139779</updated>
       <workItem from="1582904152556" duration="781000" />
       <workItem from="1582905797197" duration="19212000" />
+      <workItem from="1582991978108" duration="5683000" />
     </task>
     <servers />
   </component>
@@ -75,10 +76,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582914948265" />
-    <state x="384" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582905796283">
+    <state x="384" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582992059188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="384" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582905796282" />
+    <state x="384" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582992059188" />
     <state x="415" y="155" key="git4idea.merge.GitPullDialog" timestamp="1582906856351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

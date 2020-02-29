@@ -195,7 +195,18 @@ body [class^="icon-"], body [class*=" icon-"] {
 	margin-bottom: 30px;
 
 }
-
+.button {
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 10px 17px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 10px 5px;
+	cursor: pointer;
+}
 .align-center {
 	text-align: center
 }

@@ -22,7 +22,7 @@
                     <li><a href="index.html">Câmaras</a></li>
                     <li><a href="recluse.html">Reclusos </a></li>
                     <li><a href="visitor.html">Visitas </a></li>
-                    <li><a href="warning.html"> Alertas </a></li>
+                    <li><a href="alerts.html"> Alertas </a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -49,10 +49,10 @@
 
 
 
-            <div class="span7">
-                <div class="content">
+            <div class="span7" align="center">
+                <div class="content" >
 
-                    <div class="moduleAlert" align="center" >
+                    <div class="moduleAlert"  >
                         <div class="module-head">
                             <h3>Alerta da Câmara ___</h3>
                         </div>
@@ -71,7 +71,14 @@
                                         <div class="stream-headline">
                                             <h7 class="stream-author" align="center">
                                                 Detetado movimento na câmara __ às 15:30
-                                            </h7>
+                                                <br>
+                                            </h7> <br> <br>
+                                           <!-- <a class="button" href="index.html"><button>Ver Câmaras</button></a>-->
+                                            <a class="button" href="index.html">Ver Câmaras</a>
+                                            <a class="button" href="index.html">Registar Ocorrência</a>
+                                          <!--  <button class="button" onclick="alert('Hello world!')" <a href="index.html">Ver Câmaras</a></button>
+                                            <button type="button" class="button" <a href="index.html">Registo da Ocorrência</a></button>-->
+
                                         </div><!--/.content-->
 
                                     </div><!--/.span9-->
@@ -87,6 +94,25 @@
                             </div>
                         </div>
 
+                    <!-- Logout Modal-->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header btn-green3">
+                                    <h5 class="modal-title" id="exampleModalLabel">Sair</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Tem a certeza que pretende sair?</div>
+                                <div class="modal-footer">
+                                    <a class="btn btn-green3" href="index.html" id="btnSair">Sair</a>
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
                         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
                         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
