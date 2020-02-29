@@ -47,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582904139779</updated>
       <workItem from="1582904152556" duration="781000" />
-      <workItem from="1582905797197" duration="13481000" />
+      <workItem from="1582905797197" duration="19212000" />
     </task>
     <servers />
   </component>
@@ -55,6 +55,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="736" y="118" key="FileChooserDialogImpl" timestamp="1582932218620">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="736" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582932218620" />
     <state x="505" y="262" key="Github.CreateGistDialog" timestamp="1582917492886">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
