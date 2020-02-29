@@ -268,6 +268,7 @@ body [class^="icon-"], body [class*=" icon-"] {
 	position: relative;
 	z-index: 9999
 }
+
 .navbar .nav>li>.dropdown-menu {
 	border: 1px solid #ccc;
 	-webkit-border-radius: 0 0 3px 3px;
@@ -313,6 +314,18 @@ box-shadow: none;
 	right: 0;
 	left: auto
 }
+
+.pull-date1{
+padding-left: 470px;
+	
+	padding-top: 35px;
+}
+
+.pull-hours1{
+	padding-left:475px;
+
+}
+
 .navbar .divider-vertical {
 	background: #eee;
 	border-left: 0;
@@ -1102,6 +1115,8 @@ text-decoration: none!important;
 	border-radius: 4px;
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	/*padding-left: 300px;
+	padding-right: 300px;*/
 
 
 
@@ -1661,6 +1676,14 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', end
 	height: 34px;
 	padding: 0 15px
 }
+
+.spanAlert{
+
+	width: 550px;
+	height: 420px;
+	padding-left: 300px;
+}
+
 #gridtip {
 	background: #333;
 	-webkit-border-radius: 3px;

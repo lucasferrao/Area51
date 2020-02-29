@@ -24,6 +24,7 @@
                     <li><a href="visitor.html">Visitas </a></li>
                     <li><a href="alerts.html"> Alertas </a></li>
                 </ul>
+
                 <ul class="nav pull-right">
                     <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="images/user.png" class="nav-avatar" />
@@ -35,6 +36,39 @@
                             <li><a href="login.html">Logout</a></li>
                         </ul>
                     </li>
+                </ul>
+                <ul class="nav pull-date">
+                        <h5  class="nav pull-date1" id="date"></h5>
+
+                        <script>
+                            n =  new Date();
+                            y = n.getFullYear();
+                            m = n.getMonth() + 1;
+                            d = n.getDate();
+                            document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+                        </script>
+                    </ul>
+                    <ul class="nav pull-hours">
+                        <body onload="startTime()">
+
+                        <h5 class="nav pull-hours1" id="txt"></h5>
+                        <script>
+                            function startTime() {
+                                var today = new Date();
+                                var h = today.getHours();
+                                var m = today.getMinutes();
+                                var s = today.getSeconds();
+                                m = checkTime(m);
+                                s = checkTime(s);
+                                document.getElementById('txt').innerHTML =
+                                    h + ":" + m + ":" + s;
+                                var t = setTimeout(startTime, 500);
+                            }
+                            function checkTime(i) {
+                                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                                return i;
+                            }
+                        </script>
                 </ul>
             </div>
             <!-- /.nav-collapse -->
@@ -49,7 +83,7 @@
 
 
 
-            <div class="span7" align="center">
+            <div class="spanAlert" align="center">
                 <div class="content" >
 
                     <div class="moduleAlert"  >
@@ -86,11 +120,11 @@
                             </div><!--/.container-->
                         </div><!--/.wrapper-->
                     </div>
-                        <div class="footer">
-                            <div class="container">
+                        <div class="footer" align="center">
+                            <div class="container" >
 
 
-                                <b class="copyright">&copy; 2020 Área51 </b> All rights reserved.
+                                <b class="copyright" >&copy; 2020 Área51 </b> All rights reserved.
                             </div>
                         </div>
 
