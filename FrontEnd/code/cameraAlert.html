@@ -75,7 +75,7 @@
                                             </h7> <br> <br>
                                            <!-- <a class="button" href="index.html"><button>Ver Câmaras</button></a>-->
                                             <a class="button" href="index.html">Ver Câmaras</a>
-                                            <a class="button" href="index.html">Registar Ocorrência</a>
+                                            <a class="button" data-toggle="modal" data-target="#Modal">Registar Ocorrência</a>
                                           <!--  <button class="button" onclick="alert('Hello world!')" <a href="index.html">Ver Câmaras</a></button>
                                             <button type="button" class="button" <a href="index.html">Registo da Ocorrência</a></button>-->
 
@@ -94,25 +94,42 @@
                             </div>
                         </div>
 
-                    <!-- Logout Modal-->
-                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!--Inicio JANELA Modal para Fazer Registo da Ocorrência-->
+                    <div class="modal fade text-left" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header btn-green3">
-                                    <h5 class="modal-title" id="exampleModalLabel">Sair</h5>
-                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">Tem a certeza que pretende sair?</div>
-                                <div class="modal-footer">
-                                    <a class="btn btn-green3" href="index.html" id="btnSair">Sair</a>
-                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <div class="modal-header model-title1">
+                                    <h3 class="modal-title" id="exampleModalLabel">Registo da Ocorrência <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button></h3>
 
+
+
+                                </div>
+                                <div class="stream-headline1">
+                                   <!-- <h5 class="stream-reg">
+                                        <br>
+                                        Sexo:
+                                        <small>Feminino</small>
+                                    </h5>-->
+                                    <br>
+                                    <h5>
+                                        <label>Assunto</label> <input type = "text" id="mytext" value="text here" />
+                                    </h5>
+                                    <h5>
+                                        <label>Descrição</label> <textarea id= "myTextArea" rows="3" cols="80">Your Text here</textarea>
+                                    </h5>
+                                <div class="modal-body">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-reg" data-dismiss="modal">Registar</button>
+                                    <button type="button" class="btn btn-reg" data-dismiss="modal" >Cancelar</button>
+                                   <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--Fim Janela Modal do Registar Ocorrência -->
                         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
                         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
                         <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

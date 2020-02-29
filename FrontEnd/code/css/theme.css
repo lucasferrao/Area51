@@ -107,6 +107,13 @@ blockquote small::before {
 	color: #999;
 	padding: 30px 0 60px
 }
+
+.modal-footer{
+	color: #999;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
 .footer .nav li {
 	float: left
 }
@@ -195,18 +202,7 @@ body [class^="icon-"], body [class*=" icon-"] {
 	margin-bottom: 30px;
 
 }
-.button {
-	background-color: #1c87c9;
-	border: none;
-	color: white;
-	padding: 10px 17px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 10px 5px;
-	cursor: pointer;
-}
+.
 .align-center {
 	text-align: center
 }
@@ -482,7 +478,30 @@ transition: all .2s ease-in-out;
 
 /* Buttons */
 
+.btn-reg{
+	  color: #fff !important;
+	  background-color: #800000 !important;
+	  border-color: #800000 !important;
+  }
 
+.close{
+	color: #ffffff !important;
+
+}
+
+
+.button {
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 10px 17px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 10px 5px;
+	cursor: pointer;
+}
 .btn {
 	display: inline-block;
 	margin-bottom: 0;
@@ -811,6 +830,13 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='@topColor', end
 	line-height: 16px;
 	margin: 15px 0 0
 }
+
+.model-title1 {
+	color: #fff !important;
+	background-color: #800000 !important;
+	border-color: #800000 !important;
+}
+
 .media.user {
 	padding: 15px;
 	-webkit-transition: all .2s ease-in-out;
@@ -1206,12 +1232,26 @@ border-top-left-radius: 3px;
 	
 }
 .stream-author {
-	font-size: 14px;
-	margin: 0 0 5px
+	 font-size: 14px;
+	text-align: left;
+	 margin: 0 0 5px
+ }
+
+.stream-reg {
+	font-size: 20px;
+	margin: 0 0 0px
 }
+
 .stream-headline {
 	margin: 5px 0 10px
 }
+
+.stream-headline1 {
+	/*margin: 5px 0 10px;*/
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 .stream-options a [class^="icon-"], .stream-options a [class*=" icon-"] {
 	font-size: 11px!important
 }
