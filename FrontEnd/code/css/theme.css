@@ -75,7 +75,7 @@ blockquote small::before {
 
  .border {
 	 border-style:solid;
-	 border-color:#800000;
+	 border-color:#990000;
  }
 
 .lead {
@@ -218,7 +218,9 @@ body [class^="icon-"], body [class*=" icon-"] {
 	padding: 20px
 }
 .navbar .nav>li>a {
-	padding: 40px 15px;
+	padding: 15px 15px;
+	margin-top: 30px;
+	margin-right: 10px;
 	font-weight: bold;
 	color: #777
 }
