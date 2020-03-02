@@ -22,18 +22,18 @@
 					<li><a href="index.html">Câmaras</a></li>
 					<li><a href="recluse.html">Reclusos </a></li>
 					<li><a href="visitor.html">Visitas </a></li>
-					<li><a href="warning.html">Alertas </a></li>
+					<li><a href="alerts.html">Alertas </a></li>
 				</ul>
 				<ul class="nav pull-right">
 					<li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img src="images/user.png" class="nav-avatar" />
 						<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Your Profile</a></li>
-							<li><a href="#">Edit Profile</a></li>
-							<li><a href="#">Account Settings</a></li>
+							<li><a href="#">Perfil</a></li>
+							<li><a href="#">Definições de Conta</a></li>
+
 							<li class="divider"></li>
-							<li><a href="#">Logout</a></li>
+							<li><a href="login.html">Logout</a></li>
 						</ul>
 						<!--<ul class="nav pull-right">
                             <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
@@ -47,6 +47,39 @@
                         </button>
                         </form>-->
 					</li>
+				</ul>
+				<ul class="nav pull-date">
+					<h5  class="nav pull-date1" id="date"></h5>
+
+					<script>
+						n =  new Date();
+						y = n.getFullYear();
+						m = n.getMonth() + 1;
+						d = n.getDate();
+						document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+					</script>
+				</ul>
+				<ul class="nav pull-hours">
+					<body onload="startTime()">
+
+					<h5 class="nav pull-hours1" id="txt"></h5>
+					<script>
+						function startTime() {
+							var today = new Date();
+							var h = today.getHours();
+							var m = today.getMinutes();
+							var s = today.getSeconds();
+							m = checkTime(m);
+							s = checkTime(s);
+							document.getElementById('txt').innerHTML =
+									h + ":" + m + ":" + s;
+							var t = setTimeout(startTime, 500);
+						}
+						function checkTime(i) {
+							if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+							return i;
+						}
+					</script>
 				</ul>
 			</div>
 			<!-- /.nav-collapse -->
@@ -711,7 +744,7 @@
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+			<b class="copyright">&copy; 2020 Área51 </b> All rights reserved.
 		</div>
 	</div>
 
