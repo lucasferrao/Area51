@@ -149,7 +149,7 @@
 
             </div><!--/.sidebar-->
 
-            <div class="span9" style="width:700px; height:600px;">
+            <div class="span9" style="width:800px; height:600px;">
                <div class="content">
                     <div class="module">
                         <div class="module-head">
@@ -213,8 +213,8 @@
 
                                        <button type="button" class="btn btn-default" id="buttons-hbox" data-toggle=" data-target">Visitas</button>-->
                                     <br>
-                                <center>
-
+                                <div>
+<center>
                                     <button class="botao">
                                         <a href="visitor.html">Visitas</a>
                                     </button>
@@ -237,31 +237,45 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <!-- >Registo de ocorrências -->
+                                        <button class="botao" type="button" data-toggle="modal" data-target="#modalExemplo">
+                                            <a href="#abrirOcorrencias" data-toggle="modal" data-target="#modalExemplo" type="button" id="buttons-hbox" class="botao">Registar Ocorrências</a>
+                                        </button>
 
-                                    <button type="button" class="botao" data-toggle="modal" data-target="#modalExemplo">
-                                        Registo de ocorrências
-                                    </button>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h7 class="modal-title" id="exampleModalLabel">Registo de Ocorrências</h7>
-                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
-                                            </div>
+                                    <div id="abrirOcorrencias" class="modal" >
+                                        <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                        <div class="modal-content">
+                                        <div class="module-head">
+                                            <div class="Modal">
+                                            <h3 class="modal-title"  id="exampleModalLabel" >Registo de Ocorrências</h3>
+                                        </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <h51>
+                                            <label>Assunto: &nbsp;&nbsp;&nbsp; <input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
+                                        </h51>
+                                        <h51>
+                                            <label>Descrição: &nbsp;&nbsp;&nbsp; <textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
+                                        </h51>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-reg" data-dismiss="modal">Registar</button>
+                                            <button type="button" class="btn btn-reg" data-dismiss="modal" >Cancelar</button>
+                                            <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
                                         </div>
                                     </div>
+                                    </div>
+                                    <button class="botao">
+                                        <a href="#abrirOcorrencias" type="button" id="buttons-hbox" class="botao">
+                                            Histórico de Visitas</a>
+                                    </button>
+                                    <!-- Modal -->
 
 
-                                </center>
+
+</center>
 
     </div><!--/.container-->
 </div><!--/.wrapper-->
