@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="" />
+    <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/code/activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/activity.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/code/recluse.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/recluse.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,5 +78,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="415" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1582906856351" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583087971810">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583087971810" />
   </component>
 </project>

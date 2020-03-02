@@ -43,26 +43,114 @@
     <!-- /navbar-inner -->
 </div>
 
+
+
 <div class="wrapper">
     <div class="container">
+
+
         <div class="row">
-            <div class="span3">
-                <div class="sidebar">
-                        <li class="active">
-                            <form class="navbar-search pull-left input-append" action="#">
-                                <input type="text" class="span3">
-                                <button class="btn" type="button"  width="50">
+
+            <div class="span3" style="width:300px; height:400px;">
+                <div class="sidebar" style="width:300px; height:400px;">
+
+                            <form class="navbar-search pull-left input-append" action="#" >
+                                <input type="text" class="span3" >
+                                <button class="btn" type="button" >
                                     <i class="icon-search"></i>
                                 </button>
                             </form>
-                        </li>
-                </div><!--/.sidebar-->
-            </div><!--/.span3-->
+
+                                    <ul class="btn-box big span3">
+
+                                            <a href="recluse.html">
+                                                <p > <span class="palavra"> Recluso 1</p>
+                                            </a>
+                                            <a href="recluse.html">
+                                                <p><span class="palavra"> Recluso 2 </p>
+                                            </a>
+                                            <a href="recluse.html">
+                                                <p> <span class="palavra">Recluso 3 </p>
+                                            </a>
+
+                                        <!-- registar novo recluso- janela modal -->
+
+                                        <a href="#abrirModal" type="button" id="buttons-hbox" class="botao">Registar Reclusos</a>
+
+                                        <div id="abrirModal" class="modal">
+                                            <a href="#fechar" title="Fechar" class="fechar">x</a>
+
+                                            <h7>Registo de Recluso</h7>
+
+                                            <form2  action="/pagina-processa-dados-do-form" method="post">
+                                                <br>
+                                                <br>
+                                                <div>
+                                                    Nome:
+                                                    <center>
+                                                    <input type="text" size="35" name="nome">
+                                                    </center>
+                                                </div>
+                                                <div>
+                                                    Morada:
+                                                    <center>
+                                                    <input type="text" size="35" name="adress">
+                                                    </center>
+                                                </div>
+                                                <div>
+                                                    Data de nascimento:
+                                                    <center>
+                                                    <input type="text" size="35" name="date">
+                                                    </center>
+                                                </div>
+                                                <div>
+                                                    Contactos:
+                                                    <center>
+                                                    <input type="text" size="35" name="adress">
+                                                        </center>
+                                                </div>
+                                                <div>
+
+                                                    Doenças:
+                                                    <center>
+                                                    <input type="text" size="35" name="adress">
+                                                    </center>
+                                                </div>
+                                                <div>
+
+                                                    Causa:
+                                                    <center>
+                                                    <input type="text" size="10" name="adress">
+                                                    </center>
+                                                </div>
+
+                                                <form>
+                                                    Sexo:
+                                                    <br>
+                                                    <input type="radio" name="male" value="male" > Masculino
+                                                    <input type="radio" name="feminino" VALUE="feminino"> Feminino
+                                                </form>
+                                                <br>
+                                            </form2>
+
+                                            <button href="recluse.html" type="submit" class="botao2" onclick="msg()"> Guardar Dados</button>
+                                            <script>
+                                                function msg() {
+                                                    alert("Dados guardados com sucesso!");
+                                                }
+                                            </script>
+                                        </div>
+                                    </ul>
+                            </form>
+                </div><!--/.span3-->
 
 
-            <div class="span9">
-                <div class="content">
 
+
+            </div><!--/.sidebar-->
+
+            <div class="span9" style="width:700px; height:600px;">
+               <div class="content">
                     <div class="module">
                         <div class="module-head">
                             <h3>Dados Dos Reclusos</h3>
@@ -120,13 +208,64 @@
                                                 <small>931232452</small>
                                             </h5>
                                         </div><!--/.content-->
-                                    </div><!--/.span9-->
-                                </div>
+                                    </div>
+                                   <!-- <div class="modal-footer">
+
+                                       <button type="button" class="btn btn-default" id="buttons-hbox" data-toggle=" data-target">Visitas</button>-->
+                                    <br>
+                                <center>
+
+                                    <button class="botao">
+                                        <a href="visitor.html">Visitas</a>
+                                    </button>
+
+                                    <!-- HISTORICO -->
+                                    <button type="button" class="botao" data-toggle="modal" data-target="#modalExemplo">
+                                       Histórico de ocorrências
+                                    </button>
+                                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h7 class="modal-title" id="exampleModalLabel">Título do modal</h7>
+                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- >Registo de ocorrências -->
+
+                                    <button type="button" class="botao" data-toggle="modal" data-target="#modalExemplo">
+                                        Registo de ocorrências
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h7 class="modal-title" id="exampleModalLabel">Título do modal</h7>
+                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </center>
+
     </div><!--/.container-->
 </div><!--/.wrapper-->
 
-<div class="footer">
-</div>
 
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
