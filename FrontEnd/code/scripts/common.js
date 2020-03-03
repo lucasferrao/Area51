@@ -234,3 +234,16 @@
         $("#pie-interactive").bind("plotclick", pieClick);
     }
 });
+
+//password at least 8 digits
+$("#loginvalidate").click(function () {
+
+	if ($("input[type=password]").filter(function () {
+		return this.value.match(/^(?=.*\d)[0-9a-zA-Z]{8,}$/);
+	})) {
+		$("div").text("pass");
+	} else {
+		$("div").text("fail");
+	}
+
+});
