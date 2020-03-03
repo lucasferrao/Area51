@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/activity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/alerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/alerts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/cameraAlert.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/cameraAlert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/message.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/other-login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/other-user-listing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/other-user-profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/sensorAlert.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/sensorAlert.html" afterDir="false" />
-    </list>
+    <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +53,8 @@
       <workItem from="1582991978108" duration="5956000" />
       <workItem from="1583001276623" duration="11341000" />
       <workItem from="1583079612494" duration="4146000" />
-      <workItem from="1583155417391" duration="2392000" />
+      <workItem from="1583155417391" duration="9540000" />
+      <workItem from="1583189313389" duration="1614000" />
     </task>
     <servers />
   </component>
@@ -87,10 +74,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="54" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1582906711508" />
-    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1582906718917">
+    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1583161272311">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1582906718917" />
+    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1583161272311" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1583021565029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -103,11 +90,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="384" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582992059188" />
-    <state x="389" y="145" key="git4idea.merge.GitPullDialog" timestamp="1583161134429">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="415" y="155" key="git4idea.merge.GitPullDialog" timestamp="1583161258743">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="145" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1583161134429" />
-    <state x="415" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1582906856351" />
+    <state x="415" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1583161258743" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1583170798697">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583170798697" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583087971810">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
