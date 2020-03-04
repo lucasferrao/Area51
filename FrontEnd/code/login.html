@@ -35,16 +35,30 @@
                                     <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
                                 </div>
                                 <hr>
-                                <form class="user">
+                                <form id="formLogin" action="index.html">
+                                <div class="user">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="id_officer" required="required" aria-describedby="id_officer" placeholder="Número de Identificação">
+                                        <label for="email" class="control-label">Número de Identificação:</label>
+                                        <input type="email" class="form-control" id="email" name="email" data-rule="required|email">
+                                    </div>
+
+
+                                    <div>
+                                        <label for="pass">Password (8 characters minimum):</label>
+                                        <input type="password" id="pass" name="password"
+                                               minlength="8" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="pwd" class="control-label">Password:</label>
+                                        <input type="password" class="form-control" id="pwd" name="pwd" data-rule="required|password">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" pattern=".{8,}" minlength="8" id="password" placeholder="Password" required>
+                                        <input type="submit" name="bt_login" id="createbutton" value="Login" class="btn btn-primary btn-user btn-block"  />
+                                        <a href="index.html"></a>
                                     </div>
-                                    <a type="button" id="loginvalidate" value="click" href="index.html" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </a>
+
+                                </div>
                                 </form>
                                 <hr>
                                 <div class="text-center">

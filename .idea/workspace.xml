@@ -4,7 +4,6 @@
     <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/code/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/recluse.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/recluse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +59,8 @@
       <workItem from="1583079612494" duration="4146000" />
       <workItem from="1583155417391" duration="9540000" />
       <workItem from="1583189313389" duration="1614000" />
+      <workItem from="1583275434652" duration="3231000" />
+      <workItem from="1583336165417" duration="295000" />
     </task>
     <servers />
   </component>
@@ -91,21 +92,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582914948265" />
-    <state x="384" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582992059188">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="360" y="175" key="com.intellij.ide.util.TipDialog" timestamp="1583336233049">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="360" y="175" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583336233049" />
     <state x="384" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582992059188" />
     <state x="415" y="155" key="git4idea.merge.GitPullDialog" timestamp="1583161258743">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="415" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1583161258743" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1583170798697">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583170798697" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583087971810">
+    <state x="318" y="151" key="run.anything.popup" timestamp="1583254478168">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583087971810" />
+    <state x="318" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1583254478168" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583170798697" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583278125664">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583278125664" />
   </component>
 </project>
