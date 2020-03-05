@@ -35,14 +35,15 @@
                                     <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
                                 </div>
                                 <hr>
-                                <form class="user" id="formLogin" action="index.html">
+                                <form class="user" id="formLogin" method="post" action="index.html">
                                     <div class="form-group">
                                         <label class="control-label">Número de Identificação:</label>
-                                        <input type="text" class="form-control" name="username" minlength="5">
+                                        <input type="text" class="form-control" name="username" minlength="5" maxlength="5">
                                     </div>
                                     <div>
                                         <label class="control-label" for="pass">Password:</label>
-                                        <input class="form-control" type="password" id="pass" name="password" minlength="8" required>
+                                        <input class="form-control" type="password" id="password" name="password" type="text" minlength="8" required>
+                                        <input type="image" id="showPassword" src="images/eye.jpg" onclick="mostrarSenha()" class="button" />
                                     </div>
                                     <hr>
                                     <div class="form-group">
@@ -66,6 +67,14 @@
 </div>
 </body>
 
+<script>
+    function mostrarSenha(){
+        var tipo = document.getElementById("password");
+        if (tipo.type == "password"){
+            tipo.type = "text";
+        }
+    }
+</script>
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
