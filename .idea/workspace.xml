@@ -6,7 +6,9 @@
 =======
     <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/code/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" afterDir="false" />
     </list>
 >>>>>>> 17b00950f27c07f76e22da7fdb0f5319bb6516e2
     <option name="SHOW_DIALOG" value="false" />
@@ -106,9 +108,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583170798697" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583087971810">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1583357669211">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583087971810" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1583357669211" />
   </component>
 </project>
