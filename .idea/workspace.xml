@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6ea3b823-e128-4f7d-b531-a24f38edb71a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/code/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/scripts/common.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,10 @@
       <workItem from="1583079612494" duration="4146000" />
       <workItem from="1583155417391" duration="9540000" />
       <workItem from="1583189313389" duration="2513000" />
+      <workItem from="1583367144009" duration="32000" />
+      <workItem from="1583596881749" duration="9000" />
+      <workItem from="1583597390887" duration="71000" />
+      <workItem from="1583598084145" duration="208000" />
     </task>
     <servers />
   </component>
@@ -91,9 +93,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582914948265" />
-    <state x="384" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582992059188">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="360" y="175" key="com.intellij.ide.util.TipDialog" timestamp="1583598289887">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="360" y="175" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1583598289887" />
     <state x="384" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582992059188" />
     <state x="415" y="155" key="git4idea.merge.GitPullDialog" timestamp="1583161258743">
       <screen x="0" y="0" width="1366" height="728" />
