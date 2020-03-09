@@ -62,7 +62,7 @@
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #ffffff !important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -2347,14 +2347,14 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: white;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #8C0A0A;
+  border-color: #8C0A0A;
 }
 
 .btn-danger:hover {
   color: white;
-  background-color: #c82333;
-  border-color: #bd2130;
+  background-color: #8C0A0A;
+  border-color: #8C0A0A;
 }
 
 .btn-danger:focus, .btn-danger.focus {
@@ -2363,15 +2363,15 @@ fieldset:disabled a.btn {
 
 .btn-danger.disabled, .btn-danger:disabled {
   color: white;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #8C0A0A;
+  border-color:#8C0A0A;
 }
 
 .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,
 .show > .btn-danger.dropdown-toggle {
   color: white;
   background-color: white;
-  border-color: #b21f2d;
+  border-color: #8C0A0A;
 }
 
 .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus,
@@ -5552,7 +5552,7 @@ button.bg-success:focus {
 a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: #117a8b !important;
+  background-color: white !important;
 }
 
 .bg-warning {

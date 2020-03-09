@@ -539,16 +539,17 @@ transition: all .2s ease-in-out;
 
 
 .button {
-	background-color: #1c87c9;
-	border: none;
+	background-color: #8C0A0A;
+	border: #800000;
 	color: white;
-	padding: 10px 17px;
+	padding: 3px 7px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 20px;
+	font-size: 15px;
 	margin: 10px 5px;
 	cursor: pointer;
+
 }
 .btn {
 	display: inline-block;
@@ -1526,7 +1527,7 @@ border-top-left-radius: 3px;
 	margin-bottom: 0
 }
 .dataTables_wrapper table th {
-	background: #800000;
+
 	cursor: pointer
 }
 .dataTables_wrapper table th:focus {
