@@ -36,16 +36,16 @@
                                 </div>
                                 <hr>
                                 <form class="user" id="formLogin" method="post" action="index.html">
-                                    <div class="form-group" >
-                                        <label class="control-label" >Número de Identificação:</label>
+                                    <div class="form-group">
+                                        <label class="control-label">Número de Identificação:</label>
                                         <input type="text" class="form-control" name="username" minlength="5" maxlength="5">
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label" for="pass" >Password:</label>
-                                        <input class="form-control" type="text" minlength="8" required>
-                                        <input  type="image" id="showPassword" src="images/eye.jpg" onclick="mostrarSenha()" class="button" />
+                                    <div>
+                                        <label class="control-label" for="password">Password:</label>
+                                        <input class="form-control" type="password" id="password" name="password" type="text" minlength="8" required>
+                                        <input type="image" id="showPassword" src="images/eye.jpg" onclick="mostrarSenha()" class="button" />
                                     </div>
+                                    <hr>
                                     <div class="form-group">
                                         <input type="submit" name="bt_login" id="createbutton" value="Login" class="btn btn-primary btn-user btn-block"  />
                                         <a href="index.html"></a>
