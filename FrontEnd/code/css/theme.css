@@ -6,13 +6,19 @@ All Rights Reserved.
 
 */
 
-body {
-	 font-size: 15px;
-	 font-family: "", sans-serif;
+title {
+	 font-size: 20px;
+	 font-family: "Teko", sans-serif;
 	 background: #fff;
 	 color: #000000
  }
 
+body {
+	font-size: 15px;
+	font-family: "Open Sans", sans-serif;
+	background: #fff;
+	color: #000000
+}
 
 h1, h2, h4, h5, h6 {
 	color: #333;
@@ -25,7 +31,7 @@ h3 {
 	 text-align: center
  }
 
-h8 {
+a2 {
 	color: #ffffff;
 	margin-top: 0;
 	text-align: center
@@ -112,6 +118,10 @@ blockquote small::before {
  .border {
 	 border-style:solid;
 	 border-color:#990000;
+	 font-size: 20px;
+	 font-family: "Teko", sans-serif;
+	 background: #fff;
+	 color: #000000
  }
 
 .lead {
