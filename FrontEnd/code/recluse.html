@@ -184,7 +184,7 @@
                                         <div class="stream-headline">
                                             <h5 class="stream-author">
                                                 Data de nascimento:
-                                                <small>06/03/2000</small>
+                                                <small>dd/mm/aaaa</small>
                                             </h5>
                                         </div><!--/.content-->
                                         <div class="stream-headline">
@@ -222,65 +222,51 @@
 
                                        <button type="button" class="btn btn-default" id="buttons-hbox" data-toggle=" data-target">Visitas</button>-->
                                     <br>
-                                <div>
-<center>
-    <button type="button" class="botao">
-        <a href="visits.html">Visitas</a>
-    </button>
-                                    <!-- HISTORICO -->
-                                    <button type="button" class="botao" data-toggle="modal" data-target="#modalExemplo">
-                                       Histórico de ocorrências
-                                    </button>
-                                    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h7 class="modal-title" id="exampleModalLabel">Histórico de Ocorrências</h7>
-                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
-                                                </div>
-                                                <div class="modal-body">
-                                                    ...
-                                                </div>
+                                                                    <div>
+                                    <center>
+                                        <button type="button" class="botao">
+                                            <a href="visits.html">Visitas</a>
+                                        </button>
+                                                                        <!-- HISTORICO -->
 
+                                        <button type="button" class="botao" >
+                                            <a href="alerts.html"> Histórico de ocorrências </a>
+                                                                        <!-- >Registo de ocorrências -->
+                                        <button class="botao" type="button" data-toggle="modal" data-target="#modalOcurrences">
+                                            Registar Ocorrências
+                                        </button>
+                                        <div class="modal fade Ocurrences" id="modalOcurrences">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="module-head">
+                                                        <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                        <h3 class="modal-title">Registo da Ocorrência</h3>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="stream-headline1">
+                                                            <h51>
+                                                                <label>Assunto:<input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
+                                                            </h51>
+                                                            <h51>
+                                                                <label>Descrição:<textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
+                                                            </h51>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Registar</button>
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
+                                                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- >Registo de ocorrências -->
-    <button class="botao" type="button" data-toggle="modal" data-target="#modalOcurrences">
-        Registar Ocorrências
-    </button>
-    <div class="modal fade Ocurrences" id="modalOcurrences">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="module-head">
-                    <a href="#fechar" title="Fechar" class="fechar">x</a>
-                    <h3 class="modal-title">Registo da Ocorrência</h3>
-                </div>
-                <div class="modal-body">
-                    <div class="stream-headline1">
-                        <h51>
-                            <label>Assunto:<input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
-                        </h51>
-                        <h51>
-                            <label>Descrição:<textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
-                        </h51>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Registar</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
-                    <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <button type="button" class="botao" >
-        <a href="visitorperRecluse.html"> Histórico de Visitas </a>
-    </button>
-</center>
+                                        <button type="button" class="botao" >
+                                            <a href="visitorperRecluse.html"> Histórico de Visitas </a>
+                                        </button>
+                                    </center>
 
-    </div><!--/.container-->
-</div><!--/.wrapper-->
+                                        </div><!--/.container-->
+                                    </div><!--/.wrapper-->
 
 
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
