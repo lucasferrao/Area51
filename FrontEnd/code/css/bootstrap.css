@@ -4870,7 +4870,7 @@ button.close {
 }
 
 .modal {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -4879,6 +4879,8 @@ button.close {
   display: none;
   overflow: hidden;
   outline: 0;
+  width: 800px;
+  height: 600px;
 }
 
 .modalleft {
@@ -4887,7 +4889,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 900;
   display: none;
   overflow: hidden;
   outline: 0;
@@ -4900,7 +4902,8 @@ button.close {
 
 .modal-dialog {
   position: relative;
-  width: auto;
+  width: 600px;
+  height: 600px;
   margin: 0.5rem;
   pointer-events: none;
 }
@@ -4924,7 +4927,8 @@ button.close {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 600px;
+  height: 700px;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
@@ -4959,10 +4963,11 @@ button.close {
   border-bottom: 1px solid #e9ecef;
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
+  width: 700px;
 }
 
 .modal-header .close {
-  padding: 1rem;
+  padding: 3rem;
   margin: -1rem -1rem -1rem auto;
 }
 
@@ -4972,9 +4977,12 @@ button.close {
 }
 
 .modal-body {
-  position: relative;
+  position: center;
   flex: 1 1 auto;
   padding: 1rem;
+  width: 800px;
+  height: 500px;
+
 }
 
 .modal-footer {
@@ -4997,13 +5005,14 @@ button.close {
   position: absolute;
   top: -9999px;
   width: 50px;
-  height: 50px;
+  height: 70px;
   overflow: scroll;
 }
 
 @media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 500px;
+  .modal-dialog = modal {
+    width: 500px;
+    height: 500px;
     margin: 1.75rem auto;
   }
   .modal-dialog-centered {

@@ -100,85 +100,66 @@
                                             <a href="recluse.html">
                                                 <p> <span class="palavra">Recluso 3 </p>
                                             </a>
-
                                         <!-- registar novo recluso- janela modal -->
-
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="botao">Registar Reclusos</a>
 
-                                        <div id="abrirModal" class="modal">
-                                            <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                        <div class="modal" id="abrirModal">
+                                                <div class="module-head">
+                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                    <h3 class="modal-title">Registo de Reclusos</h3>
+                                                </div>
+<br>
+                                            <center>
 
-                                            <h7>Registo de Recluso</h7>
-
-                                            <form2  class="modal-body" action="/pagina-processa-dados-do-form" method="post">
-                                                <br>
-                                                <br>
-                                                <div>
+                                            </center>
+                                                <h5 align="center">
                                                     Nome:
-                                                    <center>
-                                                    <input type="text" size="35" name="nome">
-                                                    </center>
-                                                </div>
-                                                <div>
+                                                        <input type="text" size="35" name="nome">
+                                                </h5>
+                                                <h5 align="center">
                                                     Morada:
-                                                    <center>
-                                                    <input type="text" size="35" name="adress">
-                                                    </center>
-                                                </div>
-                                                <div>
+                                                        <input type="text" size="35" name="adress">
+                                                </h5>
+                                                <h5 align="center">
                                                     Data de nascimento:
-                                                    <center>
-                                                    <input type="text" size="35" name="date">
-                                                    </center>
-                                                </div>
-                                                <div>
+                                                        <input type="text" size="35" name="date" placeholder="--/--/----">
+                                                </h5>
+                                                <h5 align="center">
                                                     Contactos:
-                                                    <center>
-                                                    <input type="text" size="35" name="adress">
-                                                        </center>
-                                                </div>
-                                                <div>
-
+                                                        <input type="text" size="35" name="adress">
+                                                </h5>
+                                                <h5 align="center">
                                                     Doenças:
-                                                    <center>
-                                                    <input type="text" size="35" name="adress">
-                                                    </center>
-                                                </div>
-                                                <div>
+                                                    <input type="text" size="50" name="adress">
+                                                </h5>
+                                                <h5 align="center">
 
                                                     Causa:
-                                                    <center>
-                                                    <input type="text" size="10" name="adress">
-                                                    </center>
+                                                        <input type="text" size="50" name="adress">
+                                                </h5>
+
+                                                <div>
+                                                   <h5>
+                                                       Sexo:
+                                                       <input type="radio" name="male" value="male" >Masculino
+                                                       <input type="radio" name="feminino" VALUE="feminino">Feminino
+                                                   </h5>
                                                 </div>
-
-                                                <form>
-                                                    Sexo:
-                                                    <br>
-                                                    <input type="radio" name="male" value="male" > Masculino
-                                                    &nbsp;
-                                                    &nbsp;
-                                                    &nbsp;
-                                                    <input type="radio" name="feminino" VALUE="feminino"> Feminino
-                                                </form>
-                                                <br>
-                                            </form2>
-
-                                            <button href="recluse.html" type="submit" class="botao2" onclick="msg()"> Guardar Dados</button>
-                                            <script>
-                                                function msg() {
-                                                    alert("Dados guardados com sucesso!");
-                                                }
-                                            </script>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal">Guardar Dados</button>
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
+                                                            <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
+                                                        </div>
+                                                        <script>
+                                                            function msg() {
+                                                                alert("Dados guardados com sucesso!");
+                                                            }
+                                                        </script>
+                                                 </ul>
+                                            </div>
                                         </div>
-                                    </ul>
-                            </form>
-                </div><!--/.span3-->
 
 
-
-
-            </div><!--/.sidebar-->
 
             <div class="span9" style="width:800px; height:600px;">
                <div class="content">
@@ -246,10 +227,9 @@
                                     <br>
                                 <div>
 <center>
-                                    <button class="botao">
-                                        <a href="visitorperRecluse.html">Visitas</a>
-                                    </button>
-
+    <button type="button" class="botao">
+        <a href="visits.html">Visitas</a>
+    </button>
                                     <!-- HISTORICO -->
                                     <button type="button" class="botao" data-toggle="modal" data-target="#modalExemplo">
                                        Histórico de ocorrências
@@ -258,7 +238,7 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h7 class="modal-title" id="exampleModalLabel">Título do modal</h7>
+                                                    <h7 class="modal-title" id="exampleModalLabel">Histórico de Ocorrências</h7>
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                 </div>
                                                 <div class="modal-body">
@@ -269,43 +249,37 @@
                                         </div>
                                     </div>
                                     <!-- >Registo de ocorrências -->
-                                        <button class="botao" type="button" data-toggle="modal" data-target="#modalExemplo">
-                                            <a href="#abrirOcorrencias" data-toggle="modal" data-target="#modalExemplo" type="button" id="buttons-hbox" class="botao">Registar Ocorrências</a>
-                                        </button>
-
-
-                                    <div id="abrirOcorrencias" class="modal" >
-                                        <a href="#fechar" title="Fechar" class="fechar">x</a>
-                                        <div class="modal-content">
-                                        <div class="module-head">
-                                            <div class="Modal">
-                                            <h3 class="modal-title"  id="exampleModalLabel" >Registo de Ocorrências</h3>
-                                        </div>
-                                        </div>
-                                        <br>
-                                        <br>
-                                        <h51>
-                                            <label>Assunto: &nbsp;&nbsp;&nbsp; <input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
-                                        </h51>
-                                        <h51>
-                                            <label>Descrição: &nbsp;&nbsp;&nbsp; <textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
-                                        </h51>
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-reg" data-dismiss="modal">Registar</button>
-                                            <button type="button" class="btn btn-reg" data-dismiss="modal" >Cancelar</button>
-                                            <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <button class="botao">
-                                        <a href="#abrirOcorrencias" type="button" id="buttons-hbox" class="botao">
-                                            Histórico de Visitas</a>
-                                    </button>
-                                    <!-- Modal -->
-
-
-
+    <button class="botao" type="button" data-toggle="modal" data-target="#modalOcurrences">
+        Registar Ocorrências
+    </button>
+    <div class="modal fade Ocurrences" id="modalOcurrences">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="module-head">
+                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                    <h3 class="modal-title">Registo da Ocorrência</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="stream-headline1">
+                        <h51>
+                            <label>Assunto:<input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
+                        </h51>
+                        <h51>
+                            <label>Descrição:<textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
+                        </h51>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Registar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
+                    <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="botao" >
+        <a href="visitorperRecluse.html"> Histórico de Visitas </a>
+    </button>
 </center>
 
     </div><!--/.container-->
