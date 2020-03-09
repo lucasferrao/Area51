@@ -366,22 +366,6 @@ hr{margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom:1px solid #
 .palavra{
     color: black;
 }
-.botao2{
-    color: white;
-    background-color:#800000;
-    height: 40px;
-    width: 200px;
-    padding: 5px 30px 5px 30px;
-    float:right
-}
-.botao {
-    color: white;
-    background-color:#800000;
-    height: 50px;
-    width: 160px;
-    padding: 5px 30px 5px 30px;
-}
-
 .card-deck {
     display: flex;
     flex-direction: column;

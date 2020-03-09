@@ -24,6 +24,13 @@ h3 {
 	 margin-top: 0;
 	 text-align: center
  }
+
+h8 {
+	color: #ffffff;
+	margin-top: 0;
+	text-align: center
+}
+
 h7 {
 	color: #333;
 	margin-top: 0;
@@ -684,6 +691,8 @@ transition: all .2s ease-in-out;
 	color: #fff;
 	background-color: #770808;
 	border-color: #660000;
+	margin-right: 2px;
+	margin-left: 2px;
 }
 .btn-danger.active, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open>.btn-danger.dropdown-toggle {
 	color: #fff;
