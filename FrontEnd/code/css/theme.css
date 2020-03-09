@@ -694,18 +694,19 @@ transition: all .2s ease-in-out;
 	border-color: #f9bd39
 }
 .btn-warning .badge {
-	color: #fac552;
+	color: white;
 	background-color: #fff
 }
 .btn-danger {
-	color: #fff;
+	color: white;
 	background-color: #770808;
+	text-decoration-color: white;
 	border-color: #660000;
 	margin-right: 2px;
 	margin-left: 2px;
 }
 .btn-danger.active, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open>.btn-danger.dropdown-toggle {
-	color: #fff;
+	color: white;
 	background-color: #ce2916;
 	border-color: #ae2312
 }
