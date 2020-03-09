@@ -3303,7 +3303,7 @@ tbody.collapse.show {
   top: 0.25rem;
   left: 0;
   display: block;
-  width: 1rem;
+  width: rem;
   height: 1rem;
   content: "";
   background-repeat: no-repeat;
