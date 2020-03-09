@@ -35,17 +35,21 @@
                                     <h1 class="h4 text-gray-900 mb-4">LOGIN</h1>
                                 </div>
                                 <hr>
-                                <form class="user">
+                                <form class="user" id="formLogin" method="post" action="index.html">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="id_officer" required="required" aria-describedby="id_officer" placeholder="Número de Identificação">
+                                        <label class="control-label">Número de Identificação:</label>
+                                        <input type="text" class="form-control" name="username" minlength="5" maxlength="5">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" pattern=".{8,}" minlength="8" id="password" placeholder="Password" required>
+                                    <div>
+                                        <label class="control-label" for="pass">Password:</label>
+                                        <input class="form-control" type="password" id="password" name="password" type="text" minlength="8" required>
+                                        <input type="image" id="showPassword" src="images/eye.jpg" onclick="mostrarSenha()" class="button" />
                                     </div>
                                     <hr>
-                                    <a type="button" id="loginvalidate" value="click" href="index.html" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </a>
+                                    <div class="form-group">
+                                        <input type="submit" name="bt_login" id="createbutton" value="Login" class="btn btn-primary btn-user btn-block"  />
+                                        <a href="index.html"></a>
+                                    </div>
                                 </hr>
                                 </form>
                                 <hr>
@@ -58,14 +62,19 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
 </body>
 
+<script>
+    function mostrarSenha(){
+        var tipo = document.getElementById("password");
+        if (tipo.type == "password"){
+            tipo.type = "text";
+        }
+    }
+</script>
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
