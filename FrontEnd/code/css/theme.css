@@ -26,6 +26,7 @@ h1, h2, h4, h5, h6 {
 }
 
 h3 {
+	background: #800000;
 	 color: #ffffff;
 	 margin-top: 0;
 	 text-align: center
@@ -352,12 +353,12 @@ box-shadow: none;
 }
 
 .pull-date1{
-padding-left: 380px;
+padding-left: 340px;
 	padding-top: 35px;
 }
 
 .pull-hours1{
-	padding-left:380px;
+	padding-left:340px;
 
 }
 
