@@ -99,7 +99,7 @@
                                             </h7>
                                             <br><br>
                                             <!-- <a class="button btn-danger" href="index.html">Ver Câmaras</a> -->
-                                            <a class="button btn-danger" data-toggle="modal" data-target="#Modal1">Registo da Ocorrência</a>
+                                            <a class="button btn-danger" id="buttons-hbox" href="#Modal1">Registo da Ocorrência</a>
                                         </div><!--/.content-->
 
                                     </div><!--/.span9-->
@@ -115,37 +115,37 @@
                         </div>
                     </div>
                     <!--Inicio JANELA Modal para Fazer Registo da Ocorrência-->
-                    <div class="modal fade text-left" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header model-title1">
-                                    <h3 class="modal-title" id="exampleModalLabel">Registo da Ocorrência <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                                    </button></h3>
-                                </div>
+                    <div class="modal" id="Modal1" >
+
+                        <div class="modal-content">
+                            <div class="module-head">
+                                <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                <h3 class="modal-title" >Registo da Ocorrência </h3>
+                            </div>
+
+                            <hr>
+                            <div class="modal-body">
                                 <div class="stream-headline1">
-                                    <!-- <h5 class="stream-reg">
-                                         <br>
-                                         Sexo:
-                                         <small>Feminino</small>
-                                     </h5>-->
-                                    <br>
+
+
                                     <h51>
                                         <label>Assunto: &nbsp;&nbsp;&nbsp; <input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
                                     </h51>
                                     <h51>
                                         <label>Descrição: &nbsp;&nbsp;&nbsp; <textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
                                     </h51>
-                                    <div class="modal-body">
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-reg" data-dismiss="modal">Registar</button>
-                                        <button type="button" class="btn btn-reg" data-dismiss="modal" >Cancelar</button>
-                                        <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
-                                    </div>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
+                                     <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
+                                     -->
+                                <a class="btn btn-danger" onclick="msg(Ocorrência registada com sucesso!)" href="sensorMovementAlert.html">Registar</a>
+                                <a class="btn btn-danger" href="sensorMovementAlert.html">Cancelar</a>
+                                <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
+                            </div>
                         </div>
+                    </div>
                         <!--Fim Janela Modal do Registar Ocorrência -->
                         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
                         <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>

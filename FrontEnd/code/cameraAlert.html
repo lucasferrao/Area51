@@ -96,7 +96,7 @@
                                             </h7> <br> <br>
                                            <!-- <a class="button" href="index.html"><button>Ver Câmaras</button></a>-->
                                         <!--    <a class="button btn-danger" href="index.html">Ver Câmaras</a> -->
-                                            <a class="button btn-danger" data-toggle="modal" data-target="#modalOcurrences">Registo da Ocorrência</a><!--  <button class="button" onclick="alert('Hello world!')" <a href="index.html">Ver Câmaras</a>Registar </button>
+                                            <a class="button btn-danger" type="button" id="button-hbox" href="#modalOcurrences">Registo da Ocorrência</a><!--  <button class="button" onclick="alert('Hello world!')" <a href="index.html">Ver Câmaras</a>Registar </button>
                                             <button type="button" class="button" <a href="index.html">Registo da Ocorrência</a></button>-->
 
                                         </div><!--/.content-->
@@ -116,37 +116,37 @@
 
             <!--Inicio JANELA Modal para Fazer Registo da Ocorrência-->
 
-            <div class="modal fade Ocurrences" id="modalOcurrences" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="module-head">
-                            <a href="#fechar" title="Fechar" class="fechar">x</a>
-                            <h3 class="modal-title">Registo da Ocorrência</h3>
-                        </div>
-                        <div class="modal-body">
-                            <div class="stream-headline1">
-                                <!-- <h5 class="stream-reg">
-                                     <br>
-                                     Sexo:
-                                     <small>Feminino</small>
-                                 </h5>-->
-                                <h51>
-                                    <label>Assunto: <input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
-                                </h51>
-                                <h51>
-                                    <label>Descrição: <textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
-                                </h51>
+                        <div class="modal" id="modalOcurrences" >
+
+                            <div class="modal-content">
+                                <div class="module-head">
+                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                    <h3 class="modal-title" >Registo da Ocorrência </h3>
+                                </div>
+
+                                <hr>
+                                <div class="modal-body">
+                                    <div class="stream-headline1">
+
+
+                                        <h51>
+                                            <label>Assunto: &nbsp;&nbsp;&nbsp; <input class="labelAssunto" type = "text" id="mytext"  value="text here" /> </label>
+                                        </h51>
+                                        <h51>
+                                            <label>Descrição: &nbsp;&nbsp;&nbsp; <textarea class="labelDescricao" id= "myTextArea" rows="3" cols="80">Your Text here</textarea></label>
+                                        </h51>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
+                                         <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
+                                         -->
+                                    <a class="btn btn-danger" onclick="msg(Ocorrência registada com sucesso!)" href="sensorMetalAlert.html">Registar</a>
+                                    <a class="btn btn-danger" href="sensorMetalAlert.html">Cancelar</a>
+                                    <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Registar</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
-                            <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="footer">
                 <div class="container">
