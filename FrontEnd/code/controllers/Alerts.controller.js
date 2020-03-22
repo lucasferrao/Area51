@@ -1,7 +1,7 @@
 
 const server = '';
 window.onload = function () {
-    //calls function to update spaceSponsor
+    //calls function to update Alerts
     const dataTableAlerts=  document.getElementById("dataTableAlerts")
     const renderAlerts = async () => {
         let strHtml = `
@@ -9,39 +9,37 @@ window.onload = function () {
     <tr>
 
     <th class='w-2'>#</th>
-    <th>Nome Patrocinador</th>
-    <th>Nº Patrocinador</th>
-    <th>Nº Espaço</th>
-    <th>Nome Espaço</th>
-    <th>Estado</th>
+    <th>Tipo de Alerta</th>
+    <th>Dispositivo do Alerta</th>
+    <th>Dia do Alerta</th>
+    <th>Hora do Alerta</th>
+    <th>Ocorrência</th>
     <tbody>
     </tr>
     </thead>
     `
         const response = await fetch(server)
-        const SpaceSponsors = await response.json()
+        const alerts = await response.json()
         let i = 1
-        for (const spaceSponsor of spaceSponsors){
+        for (const alert of alerts){
             /* var ts = new Date(user.birthdate);*/
             strHtml += `
         <tr>
 
         <td>${i}</td>
-        <td>${spaceSponsor.price} </td>
-        <td>${spaceSponsor.space_sponsor_date}</td>
-        <td>${spaceSponsor.date_expiration}</td>
-        <td>${spaceSponsor.is_exclusive}</td>
-        <td>${spaceSponsor.id_space}</td>
-        <td>${spaceSponsor.id_sponsor}</td>
-        <td>${spaceSponsor.sponsor_ex}</td>
-
-                            
+        <td>${alert. id_alert} </td>
+        <td>${alert.alert_type}</td>
+        <td>${alert.id_device }</td>
+        <td>${alert.alert_date}</td>
+        <td>${alert.alert_hour}</td>
+        <td>${alert.id_officer}</td>
+        
         </tr>
             `
             i++
         }
         strHtml += "</tbody>"
-        dataTableSpaceSponsor.innerHTML = strHtml
+        dataTableAlerts.innerHTML = strHtml
     }
-    renderSpaceSponsors()
+    renderAlerts()
 }

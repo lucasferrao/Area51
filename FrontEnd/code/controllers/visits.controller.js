@@ -1,47 +1,41 @@
 
-const server = 'https://paint4all.herokuapp.com/spaceSponsors';
+const server = '';
 window.onload = function () {
-    //calls function to update spaceSponsor
-    const dataTableSpaceSponsor =  document.getElementById("dataTableSpaceSponsor")
-    const renderSpaceSponsors = async () => {
+    //calls function to update Visits
+    const dataTableVisits =  document.getElementById("dataTableVisits")
+    const renderVisits = async () => {
         let strHtml = `
     <thead>
     <tr>
 
     <th class='w-2'>#</th>
-    <th>Nome Patrocinador</th>
-    <th>Nº Patrocinador</th>
-    <th>Nº Espaço</th>
-    <th>Nome Espaço</th>
-    <th>Estado</th>
+    <th>ID do Recluso</th>
+    <th>Nome do Visitante</th>
+    <th>Identificação do Visitante</th>
+    <th>Hora de Entrada</th>
     <tbody>
     </tr>
     </thead>
     `
         const response = await fetch(server)
-        const SpaceSponsors = await response.json()
+        const visits = await response.json()
         let i = 1
-        for (const spaceSponsor of spaceSponsors){
+        for (const visit of visits){
             /* var ts = new Date(user.birthdate);*/
             strHtml += `
         <tr>
-
         <td>${i}</td>
-        <td>${spaceSponsor.price} </td>
-        <td>${spaceSponsor.space_sponsor_date}</td>
-        <td>${spaceSponsor.date_expiration}</td>
-        <td>${spaceSponsor.is_exclusive}</td>
-        <td>${spaceSponsor.id_space}</td>
-        <td>${spaceSponsor.id_sponsor}</td>
-        <td>${spaceSponsor.sponsor_ex}</td>
-
-                            
+        <td>${visit.id_recluse }</td>
+        <td>${visit.visitor_name}</td>
+        <td>${visit.id_visitor}</td>
+        <td>${visit.nif }</td>
+        <td>${visit.chekin }</td>
         </tr>
             `
             i++
         }
         strHtml += "</tbody>"
-        dataTableSpaceSponsor.innerHTML = strHtml
+        dataTableVisits.innerHTML = strHtml
     }
-    renderSpaceSponsors()
+    renderVisits()
 }
