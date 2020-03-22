@@ -97,6 +97,7 @@
 
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
                                         <div class="modal" id="abrirModal">
+                                            <form id="formUser" name="formUser" class="user">
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Registo de Reclusos</h3>
@@ -104,35 +105,35 @@
                                                 <br>
                                                 <h5 align="center">
                                                     Nome:
-                                                        <input type="text" size="35" name="nome">
+                                                        <input type="text" id="name" size="35" name="nome">
                                                 </h5>
                                                 <h5 align="center">
                                                     Morada:
-                                                        <input type="text" size="35" name="adress">
+                                                        <input type="text" id="address" size="35" name="adress">
                                                 </h5>
                                                 <h5 align="center">
                                                     Data de nascimento:
-                                                        <input type="text" size="35" name="date" placeholder="dd/mm/aaaa">
+                                                        <input type="text" id="birth" size="35" name="date" placeholder="dd/mm/aaaa">
                                                 </h5>
                                                 <h5 align="center">
                                                     Contactos:
-                                                        <input type="text" size="35" name="adress">
+                                                        <input type="text" id="contacts" size="35" name="adress">
                                                 </h5>
                                                 <h5 align="center">
                                                     Doenças:
-                                                    <input type="text" size="50" name="adress">
+                                                    <input type="text" id="disease" size="50" name="adress">
                                                 </h5>
                                                 <h5 align="center">
 
                                                     Causa:
-                                                        <input type="text" size="50" name="adress">
+                                                        <input type="text" id="cause" size="50" name="adress">
                                                 </h5>
 
                                                 <div>
                                                    <h5>
                                                        Sexo:
-                                                       <input type="radio" name="male" value="male" >Masculino
-                                                       <input type="radio" name="feminino" VALUE="feminino">Feminino
+                                                       <input type="radio" id="f" name="male" value="male" >Masculino
+                                                       <input type="radio" id="m" name="feminino" VALUE="feminino">Feminino
                                                    </h5>
                                                 </div>
                                                         <div class="modal-footer">
@@ -145,6 +146,7 @@
                                                                 alert("Dados guardados com sucesso!");
                                                             }
                                                         </script>
+                                            </form>
                                                  </ul>
                                             </div>
                                         </div>
@@ -226,7 +228,7 @@
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Histórico de Ocorrências</h3>
                                                 </div>
-<hr>
+                                                        <hr>
                                             <div class="module">
                                                             <div class="module-body table">
                                                                 <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	display" width="100%">
