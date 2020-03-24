@@ -48,11 +48,11 @@ function saveRecluse()
     data.f = document.getElementById("f").value;
     data.m = document.getElementById("m").value;
     console.log(data);
-    //debugging
-    //send data to server via POST and PUT
-    fetch(server,
-        {
-            headers:
+    //debugg
+            headeing
+            //send data to server via POST and PUT
+            fetch(server,
+                  {rs:
                 {
                     'Content-Type': 'application/json'
                 },
@@ -94,7 +94,6 @@ function saveRecluse()
         console.error(err);
     });
 }
-/*
 
 function refreshRecluse() {
     async function fetchAsync() {
@@ -102,22 +101,19 @@ function refreshRecluse() {
         let txt = "";
         const response = await fetch(server,);
         const recluses = await response.json();
-
-
         //results table
 
         txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
         txt += "<thead style='background-color:#607d8b; color:white '>";
-        txt += "<tr><th>Nome</th><th>Email</th><th>Morada</th><th>Palavra-Passe</th></tr></thead><tbody>";
+        txt += "<tr><th>Nome</th><th>Morada</th><th>Data de nascimento</th><th>Contactos</th><th>Doenças</th><th>Causa</th><th>Sexo</th></tr></thead><tbody>";
 
         //tab creation
         for (const recluse of recluses) {
-            txt += "<tr><td style='text-align:right'>" + recluse.mobile_number + "</td><td>" + recluse.nif + "</td><td>" +
-                recluse.nib + "</td></tr>" + "</td><td>" + recluse.is_active + "</td><td>" + "</td><td>" + recluse.id_manager + "</td><td>" + "</td><td>" + recluse.id_user_profile + "</td><td>";
+            txt += "<tr><td style='text-align:right'>" + recluse.id_recluse + "</td><td>" + recluse.recluse_name + "</td><td>" +
+                recluse.data_de_nascimento + "</td></tr>" + "</td><td>" + recluse.gênero + "</td><td>" + "</td><td>" + recluse.doença + "</td><td>" + "</td><td>" + recluse.causas + "</td><td>";
         }
         txt += "</tbody></table>";
         renderRecluse.innerHTML = txt;
     }
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
 }
-*/
