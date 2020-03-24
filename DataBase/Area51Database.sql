@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS visitor (
 );
 
 CREATE TABLE IF NOT EXISTS visit (
-    id_visit INT NOT NULL,
+    id_visit INT AUTO_INCREMENT PRIMARY KEY,
     id_recluse INT NOT NULL,
     id_visitor INT NOT NULL,
     visit_date DATE NOT NULL,

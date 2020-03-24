@@ -65,25 +65,22 @@
         </div>
     </div>
     <!-- /navbar-inner -->
-</div>
 
 <div class="wrapper">
     <div class="container">
-
         <div class="row">
 
-            <div class="span3" style="width:300px; height:400px;">
-                <div class="sidebar" style="width:300px; height:400px;">
 
+            <div class="span3" style="width:400px; height:400px;" align="left">
+                <div class="sidebar" style="width:300px; height:400px;">
                             <form class="navbar-search pull-left input-append" action="#" >
-                                <input type="text" class="span3" >
+                                <input type="text" class="span3">
                                 <button class="btn btn-danger" type="button" >
                                     <i class="icon-search"></i>
                                 </button>
                             </form>
 
                                     <ul class="btn-box big span3">
-
                                             <a href="recluse.html">
                                                 <p > <span class="palavra"> Recluso 1</p>
                                             </a>
@@ -97,6 +94,7 @@
 
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
                                         <div class="modal" id="abrirModal">
+                                            <form id="formUser" name="formUser" class="user">
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Registo de Reclusos</h3>
@@ -104,35 +102,35 @@
                                                 <br>
                                                 <h5 align="center">
                                                     Nome:
-                                                        <input type="text" size="35" name="nome">
+                                                        <input type="text" id="name" size="35" name="nome">
                                                 </h5>
                                                 <h5 align="center">
                                                     Morada:
-                                                        <input type="text" size="35" name="adress">
+                                                        <input type="text" id="address" size="35" name="adress">
                                                 </h5>
                                                 <h5 align="center">
                                                     Data de nascimento:
-                                                        <input type="text" size="35" name="date" placeholder="dd/mm/aaaa">
+                                                        <input type="text" id="birth" size="35" name="date" placeholder="dd/mm/aaaa">
                                                 </h5>
                                                 <h5 align="center">
                                                     Contactos:
-                                                        <input type="text" size="35" name="adress">
+                                                        <input type="text" id="contacts" size="35" name="adress">
                                                 </h5>
                                                 <h5 align="center">
                                                     Doenças:
-                                                    <input type="text" size="50" name="adress">
+                                                    <input type="text" id="disease" size="50" name="adress">
                                                 </h5>
                                                 <h5 align="center">
 
                                                     Causa:
-                                                        <input type="text" size="50" name="adress">
+                                                        <input type="text" id="cause" size="50" name="adress">
                                                 </h5>
 
                                                 <div>
                                                    <h5>
                                                        Sexo:
-                                                       <input type="radio" name="male" value="male" >Masculino
-                                                       <input type="radio" name="feminino" VALUE="feminino">Feminino
+                                                       <input type="radio" id="f" name="male" value="male" >Masculino
+                                                       <input type="radio" id="m" name="feminino" VALUE="feminino">Feminino
                                                    </h5>
                                                 </div>
                                                         <div class="modal-footer">
@@ -145,14 +143,13 @@
                                                                 alert("Dados guardados com sucesso!");
                                                             }
                                                         </script>
-                                                 </ul>
-                                            </div>
+                                            </form>
                                         </div>
-            
+                                    </ul>
+                </div>
+            </div>
 
-
-
-            <div class="span9" style="width:800px; height:600px;">
+            <div class="span9" style="width:700px; height:600px;" >
                <div class="content">
                     <div class="module">
                         <div class="module-head">
@@ -165,8 +162,8 @@
                                         <img src="images/perfil.jpg" width="150px" align="center">
                                     </a>
                                 </center>
-
-
+                            </div>
+            <form id="dadosRecluso">
                                 <div class="media stream">
                                     <div class="media-body">
                                         <div class="stream-headline">
@@ -212,21 +209,18 @@
                                             </h5>
                                         </div><!--/.content-->
                                     </div>
-                                   <!-- <div class="modal-footer">
-
-                                       <button type="button" class="btn btn-default" id="buttons-hbox" data-toggle=" data-target">Visitas</button>-->
+                                </div>
+                </form>
                                     <br>
-                   <div>
                                     <center>
                                                                         <!-- HISTORICO -->
-
                                         <a class="btn btn-danger" id="buttons-hbox" type="button" href="#historicoModal">Histórico de Ocorrências </a>
                                         <div class="modal" id="historicoModal">
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Histórico de Ocorrências</h3>
                                                 </div>
-<hr>
+                                                        <hr>
                                             <div class="module">
                                                             <div class="module-body table">
                                                                 <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	display" width="100%">
@@ -273,9 +267,7 @@
                                                                 </table>
                                                             </div>
                                                         </div><!--/.module-->
-
                                                     </div>
-
 
                                                             <!-- >Registo de ocorrências -->
 
@@ -302,8 +294,6 @@
                                                         <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal">Registar</button>
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal" > Cancelar
                                                         </button>
-
-                                                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal"> Apenas bloquear</button> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,19 +307,26 @@
                                         </button>
                                     </center>
 
-                                        </div><!--/.container-->
-                                    </div><!--/.wrapper-->
-                            </div>
-                        </div>
-                    </div>
-               </div>
+                        </div><!--/.module-body-->
+                    </div><!--/.module-->
+               </div><!--content-->
+            </div><!--span9-->
+        </div><!--row-->
+    </div><!--container-->
+</div><!--wrapper-->
+</div>
+
+
+
 
 <div class="footer">
     <div class="container" >
         <b class="copyright" align="left">&copy; 2020 Área51 </b> All rights reserved.
     </div>
 </div>
+
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../controllers/registoRecluse.controller.js"></script>
 </body>
