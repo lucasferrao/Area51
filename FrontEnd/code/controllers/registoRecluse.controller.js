@@ -1,4 +1,4 @@
-const server = '';
+const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 window.onload = function ()
 {
     alert("pagina carregada com sucesso, verifique os seus dados pessoais.")

@@ -1,5 +1,5 @@
 
-const server = '';
+const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 //quando inicia a página faz
 window.onload = function () {
     //chama a função para atualizar os users

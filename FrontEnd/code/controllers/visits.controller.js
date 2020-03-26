@@ -1,5 +1,5 @@
 
-const server = '';
+const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 window.onload = function () {
     //calls function to update Visits
     const dataTableVisits =  document.getElementById("dataTableVisits")
@@ -7,7 +7,6 @@ window.onload = function () {
         let strHtml = `
     <thead>
     <tr>
-
     <th class='w-2'>#</th>
     <th>ID do Recluso</th>
     <th>Nome do Visitante</th>
@@ -29,7 +28,6 @@ window.onload = function () {
         <td>${visit.visitor_name}</td>
         <td>${visit.id_visitor}</td>
         <td>${visit.nif }</td>
-        <td>${visit.chekin }</td>
         </tr>
             `
             i++

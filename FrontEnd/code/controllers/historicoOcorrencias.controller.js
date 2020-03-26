@@ -1,4 +1,4 @@
-const server = '';
+const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 window.onload = function () {
     //calls function to update Alerts
     const dataTableHistoricoOcorrencias=  document.getElementById("dataTableHistoricoOcorrencias")
