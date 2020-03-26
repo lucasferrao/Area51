@@ -23,7 +23,7 @@ window.onload = function () {
         console.log(password);
 
         fetch('', {
-            //fetch(`${url}/signin`, {
+            fetch(`${server}/signin`, {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             method: 'POST',
             body: `username=${username}&password=${password}`
@@ -48,6 +48,7 @@ window.onload = function () {
             alert("Erro no login!" + err); console.error(err);
         });
     });
+
 
 
     /*function permissoes(username) {
