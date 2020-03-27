@@ -2,13 +2,13 @@ const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 window.onload = async function ()
 {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
-    refreshRecluse();
+    refreshRegistoOcorrencias();
     validator();
-    const formUser = document.getElementById('formUser');
-    formUser.addEventListener('submit', function (e) {
+    const registoOcorrencias = document.getElementById('registoOcorrencias');
+    registoOcorrencias.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        //document.getElementById("formUser").onsubmit= function(e){
+        //document.getElementById("dadosRecluso").onsubmit= function(e){
         //form validation
         validator();
     });
@@ -21,7 +21,7 @@ function validator()
         {
             if (res)
             {
-                saveRecluse();
+                saveRegistoOcorrencias();
             }
         },
         {
@@ -37,26 +37,23 @@ function validator()
 
         });
 }
-
 //function save
-function saveRecluse()
+function saveRegistoOcorrencias()
 {
     //store data in the date
     var data = {};
-    data.name = document.getElementById("name").value;
-    data.address = document.getElementById("address").value;
-    data.birth = document.getElementById("birth").value;
-    data.contacts = document.getElementById("contacts").value;
-    data.disease = document.getElementById("disease").value;
-    data.cause = document.getElementById("cause").value;
-    data.f = document.getElementById("f").value;
-    data.m = document.getElementById("m").value;
+    data.id_occurrence = document.getElementById("id_occurrence").value;
+    data.date = document.getElementById("mytext").value;
+    data.mytext = document.getElementById("mytext").value;
+    data.myTextArea = document.getElementById("myTextArea").value;
+    data.id_recluse = document.getElementById("id_recluse").value;
+    data.id_officer = document.getElementById("id_officer").value;
     console.log(data);
     //debugg
-            headeing
-            //send data to server via POST and PUT
-            fetch(server,
-                  {rs:
+    headeing
+    //send data to server via POST and PUT
+    fetch(server,
+        {rs:
                 {
                     'Content-Type': 'application/json'
                 },
@@ -87,7 +84,7 @@ function saveRecluse()
                 document.getElementById("formUser").reset(); //reset form data
 
                 alert("submitted with success");
-                refreshRecluse();
+                refreshRegistoOcorrencias();
             }
         }).then(function (result)
     {
@@ -99,25 +96,24 @@ function saveRecluse()
     });
 }
 
-function refreshRecluse() {
+function refreshRegistoOcorrencias() {
     async function fetchAsync() {
-        const renderRecluse = document.getElementById("result");
+        const renderRegistoOcorrencias = document.getElementById("result");
         let txt = "";
         const response = await fetch(server,);
-        const recluses = await response.json();
+        const RegistoOcorrencias = await response.json();
         //results table
 
         txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
         txt += "<thead style='background-color:#607d8b; color:white '>";
-        txt += "<tr><th>Nome</th><th>Morada</th><th>Data de nascimento</th><th>Contactos</th><th>Doenças</th><th>Causa</th><th>Sexo</th></tr></thead><tbody>";
-
+        txt += "<tr><th>ID do Recluso</th><th>Nome</th><th>Data de nascimento</th><th>Sexo</th><th>Causa</th><th>Doenças</th><th>Cela</th></tr></thead><tbody>";
         //tab creation
-        for (const recluse of recluses) {
-            txt += "<tr><td style='text-align:right'>" + recluse.id_recluse + "</td><td>" + recluse.recluse_name + "</td><td>" +
-                recluse.data_de_nascimento + "</td></tr>" + "</td><td>" + recluse.gênero + "</td><td>" + "</td><td>" + recluse.doença + "</td><td>" + "</td><td>" + recluse.causas + "</td><td>";
+        for (const RegistoOcorrencia of RegistoOcorrencias) {
+            txt += "<tr><td style='text-align:right'>" + RegistoOcorrencia.id_occurrence + "</td><td>" + RegistoOcorrencia.occurrence_description + "</td><td>" +
+                RegistoOcorrencia.occurrence_subject + "</td></tr>" + "</td><td>" + RegistoOcorrencia.occurrence_date  + "</td><td>" + "</td><td>" + RegistoOcorrencia.id_recluse  + "</td><td>" + "</td><td>" + Dadorecluse.id_officer  + "</td><td>";
         }
         txt += "</tbody></table>";
-        renderRecluse.innerHTML = txt;
+        renderRegistoOcorrencias.innerHTML = txt;
     }
-    fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
+    fetchAsync().then(data => console.og("ok")).catch(reason => console.log(reason.message));
 }

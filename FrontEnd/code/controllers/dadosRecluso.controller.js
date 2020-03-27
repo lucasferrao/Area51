@@ -2,13 +2,13 @@ const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
 window.onload = async function ()
 {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
-    refreshRecluse();
+    refreshDadosRecluse();
     validator();
-    const formUser = document.getElementById('formUser');
-    formUser.addEventListener('submit', function (e) {
+    const dadosRecluso = document.getElementById('dadosRecluso');
+    dadosRecluso.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        //document.getElementById("formUser").onsubmit= function(e){
+        //document.getElementById("dadosRecluso").onsubmit= function(e){
         //form validation
         validator();
     });
@@ -21,7 +21,7 @@ function validator()
         {
             if (res)
             {
-                saveRecluse();
+                saveDadosRecluse();
             }
         },
         {
@@ -39,24 +39,23 @@ function validator()
 }
 
 //function save
-function saveRecluse()
+function saveDadosRecluse()
 {
     //store data in the date
     var data = {};
+    data.id_recluse = document.getElementById("id_recluse").value;
     data.name = document.getElementById("name").value;
-    data.address = document.getElementById("address").value;
-    data.birth = document.getElementById("birth").value;
-    data.contacts = document.getElementById("contacts").value;
-    data.disease = document.getElementById("disease").value;
+    data.birthdate = document.getElementById("birthdate").value;
+    data.genre = document.getElementById("contacts").value;
     data.cause = document.getElementById("cause").value;
-    data.f = document.getElementById("f").value;
-    data.m = document.getElementById("m").value;
+    data.disease = document.getElementById("disease").value;
+    data.cell = document.getElementById("cell").value;
     console.log(data);
     //debugg
-            headeing
-            //send data to server via POST and PUT
-            fetch(server,
-                  {rs:
+    headeing
+    //send data to server via POST and PUT
+    fetch(server,
+        {rs:
                 {
                     'Content-Type': 'application/json'
                 },
@@ -87,7 +86,7 @@ function saveRecluse()
                 document.getElementById("formUser").reset(); //reset form data
 
                 alert("submitted with success");
-                refreshRecluse();
+                refreshDadosRecluse();
             }
         }).then(function (result)
     {
@@ -99,25 +98,24 @@ function saveRecluse()
     });
 }
 
-function refreshRecluse() {
+function refreshDadosRecluse() {
     async function fetchAsync() {
-        const renderRecluse = document.getElementById("result");
+        const renderDadosRecluse = document.getElementById("result");
         let txt = "";
         const response = await fetch(server,);
-        const recluses = await response.json();
+        const Dadosrecluse = await response.json();
         //results table
 
         txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
         txt += "<thead style='background-color:#607d8b; color:white '>";
-        txt += "<tr><th>Nome</th><th>Morada</th><th>Data de nascimento</th><th>Contactos</th><th>Doenças</th><th>Causa</th><th>Sexo</th></tr></thead><tbody>";
-
+        txt += "<tr><th>ID do Recluso</th><th>Nome</th><th>Data de nascimento</th><th>Sexo</th><th>Causa</th><th>Doenças</th><th>Cela</th></tr></thead><tbody>";
         //tab creation
-        for (const recluse of recluses) {
-            txt += "<tr><td style='text-align:right'>" + recluse.id_recluse + "</td><td>" + recluse.recluse_name + "</td><td>" +
-                recluse.data_de_nascimento + "</td></tr>" + "</td><td>" + recluse.gênero + "</td><td>" + "</td><td>" + recluse.doença + "</td><td>" + "</td><td>" + recluse.causas + "</td><td>";
+        for (const Dadorecluse of Dadosrecluse) {
+            txt += "<tr><td style='text-align:right'>" + Dadorecluse.id_recluse + "</td><td>" + Dadorecluse.recluse_name + "</td><td>" +
+                Dadorecluse.birthdate + "</td></tr>" + "</td><td>" + Dadorecluse.genre  + "</td><td>" + "</td><td>" + Dadorecluse.disease  + "</td><td>" + "</td><td>" + Dadorecluse.cause  + "</td><td>"+ "</td><td>" + Dadorecluse.cell  + "</td><td>";
         }
         txt += "</tbody></table>";
-        renderRecluse.innerHTML = txt;
-    }
-    fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
+        renderDadosRecluse.innerHTML = txt;
+}
+fetchAsync().then(data => console.og("ok")).catch(reason => console.log(reason.message));
 }

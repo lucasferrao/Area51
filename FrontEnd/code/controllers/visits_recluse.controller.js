@@ -7,7 +7,6 @@ window.onload = function () {
         let strHtml = `
     <thead>
     <tr>
-
     <th class='w-2'>#</th>
     <th>Recluso</th>
     <th>Nome do Visitante</th>
