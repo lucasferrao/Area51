@@ -69,13 +69,16 @@
 
 <script>
     function mostrarSenha(){
-        var tipo = document.getElementById("password");
-        if (tipo.type == "password"){
-            tipo.type = "text";
+
+            document.querySelector('.eye').classList.toggle('slash');
+            var password = document.querySelector('[name=password]');
+            if(password.getAttribute('type') === 'password'){
+                password.setAttribute('type', 'text');
             } else {
-            tipo.type = "password";
+                password.setAttribute('type', 'password');
+            }
         }
-    }
+
 </script>
 <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
