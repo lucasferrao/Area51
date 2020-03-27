@@ -42,12 +42,10 @@ function saveRegistoOcorrencias()
 {
     //store data in the date
     var data = {};
-    data.id_occurrence = document.getElementById("id_occurrence").value;
-    data.date = document.getElementById("mytext").value;
+    data.ocurrence_date = document.getElementById("ocurrence_date").value;
+    data.id_officer = document.getElementById("id_officer").value;
     data.mytext = document.getElementById("mytext").value;
     data.myTextArea = document.getElementById("myTextArea").value;
-    data.id_recluse = document.getElementById("id_recluse").value;
-    data.id_officer = document.getElementById("id_officer").value;
     console.log(data);
     //debugg
     headeing
@@ -106,7 +104,7 @@ function refreshRegistoOcorrencias() {
 
         txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
         txt += "<thead style='background-color:#607d8b; color:white '>";
-        txt += "<tr><th>ID do Recluso</th><th>Nome</th><th>Data de nascimento</th><th>Sexo</th><th>Causa</th><th>Doenças</th><th>Cela</th></tr></thead><tbody>";
+        txt += "<tr><th>Data:</th><th>ID do Officer:</th><th>Assunto:</th><th>Descrição:</th></tr></thead><tbody>";
         //tab creation
         for (const RegistoOcorrencia of RegistoOcorrencias) {
             txt += "<tr><td style='text-align:right'>" + RegistoOcorrencia.id_occurrence + "</td><td>" + RegistoOcorrencia.occurrence_description + "</td><td>" +
