@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27008c31-3b7f-4b66-af86-90c19ec6f575" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/code/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/code/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="27008c31-3b7f-4b66-af86-90c19ec6f575" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,13 +28,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74512a1e-aaa4-4a43-bf5c-19e8113940f9" name="Default Changelist" comment="" />
+      <changelist id="27008c31-3b7f-4b66-af86-90c19ec6f575" name="Default Changelist" comment="" />
       <created>1585176374433</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -45,6 +43,8 @@
       <workItem from="1585176379606" duration="3000000" />
       <workItem from="1585262217912" duration="863000" />
       <workItem from="1585323059946" duration="4836000" />
+      <workItem from="1585443246817" duration="625000" />
+      <workItem from="1585480360074" duration="6655000" />
     </task>
     <servers />
   </component>
@@ -52,6 +52,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Inspections" timestamp="1585483475854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Inspections/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1585483475854" />
+    <state x="438" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585482274650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1585482274650" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585353728821">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

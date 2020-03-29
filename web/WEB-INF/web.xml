@@ -25,4 +25,17 @@
         <servlet-name>WSServlet</servlet-name>
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AlertServlet</servlet-name>
+        <servlet-class>AlertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AlertServlet</servlet-name>
+        <url-pattern>/alert/*</url-pattern>
+    </servlet-mapping>
+
+
+
 </web-app>
