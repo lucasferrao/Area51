@@ -19,11 +19,11 @@ public class Occurrence {
     }
 
     /**
-     * Recluse's parametrized constructor.
+     * Occurrence's parametrized constructor.
      *
-     * @param description Recluse's description
-     * @param subject Recluse's subject
-     * @param date Recluse's date
+     * @param description Occurrence's description
+     * @param subject Occurrence's subject
+     * @param date Occurrence's date
      */
     public Occurrence(String description, String subject, Date date){
         this.description = description;

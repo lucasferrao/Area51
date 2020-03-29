@@ -1,7 +1,7 @@
 package Area51.business;
 
 public class Officer {
-    private int idOfficerLogin;
+    private String idOfficerLogin;
     private String email;
     private String password;
     private String address;
@@ -11,7 +11,7 @@ public class Officer {
      * Officer's default constructor.
      */
     public Officer(){
-        this.idOfficerLogin = 0;
+        this.idOfficerLogin = "";
         this.email = "";
         this.password = "";
         this.address = "";
@@ -27,7 +27,7 @@ public class Officer {
      * @param address Officer's address
      * @param phoneNumber Officer's phone number
      */
-    public Officer(int idOfficerLogin, String email, String password, String address,
+    public Officer(String idOfficerLogin, String email, String password, String address,
                     int phoneNumber){
         this.idOfficerLogin = idOfficerLogin;
         this.email = email;
@@ -50,7 +50,7 @@ public class Officer {
     }
 
     //Geters
-    public int getIdOfficerLogin() {
+    public String getIdOfficerLogin() {
         return this.idOfficerLogin;
     }
 
@@ -71,7 +71,7 @@ public class Officer {
     }
 
     //Setters
-    public void setIdOfficerLogin(int idOfficerLogin) {
+    public void setIdOfficerLogin(String idOfficerLogin) {
         this.idOfficerLogin = idOfficerLogin;
     }
 
@@ -100,6 +100,7 @@ public class Officer {
         StringBuilder s = new StringBuilder();
 
         s.append("Officer:\n");
+        s.append("Officer's login ID: " + this.idOfficerLogin + ".\n");
         s.append("Officer's email: " + this.email + ".\n");
         s.append("Officer's password: " + this.password + ".\n");
         s.append("Officer's address: " + this.address + ".\n");

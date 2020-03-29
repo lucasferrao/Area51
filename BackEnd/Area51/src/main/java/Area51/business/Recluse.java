@@ -1,11 +1,17 @@
 package Area51.business;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.Date;
 
+/**
+ * Represents someone that is in prison.
+ *
+ * @author A89262
+ * @version 20200329
+ */
+
 public class Recluse {
-    private String recluse_name;
+    private String recluseName;
     private Date birthdate;
     private String genre;
     private String disease;
@@ -16,7 +22,7 @@ public class Recluse {
      * Recluse's default constructor.
      */
     public Recluse(){
-        this.recluse_name = "";
+        this.recluseName = "";
         this.birthdate = Date.from(Instant.now());
         this.genre = "";
         this.disease = "";
@@ -27,16 +33,16 @@ public class Recluse {
     /**
      * Recluse's parametrized constructor.
      *
-     * @param recluse_name Recluse's name
+     * @param recluseName Recluse's name
      * @param birthdate Recluse's birthday
      * @param genre Recluse's genre
      * @param disease Recluse's disease if has
      * @param cause Recluse's jail cause
      * @param cell Recluse's cell number
      */
-    public Recluse(String recluse_name, Date birthdate, String genre, String disease,
+    public Recluse(String recluseName, Date birthdate, String genre, String disease,
                    String cause, String cell){
-        this.recluse_name = recluse_name;
+        this.recluseName = recluseName;
         this.birthdate = birthdate;
         this.genre = genre;
         this.disease = disease;
@@ -50,7 +56,7 @@ public class Recluse {
      * @param recluse a recluse
      */
     public Recluse(Recluse recluse){
-        this.recluse_name = recluse.getRecluse_name();
+        this.recluseName = recluse.getRecluseName();
         this.birthdate = recluse.getBirthdate();
         this.genre = recluse.getGenre();
         this.disease = recluse.getDisease();
@@ -58,52 +64,110 @@ public class Recluse {
         this.cell = recluse.getCell();
     }
 
-    //Getters
-    public String getRecluse_name() {
-        return this.recluse_name;
+    /**
+     * Returns a recluse's name.
+     *
+     * @return a name
+     */
+    public String getRecluseName() {
+        return this.recluseName;
     }
 
+    /**
+     * Returns a recluse's birthdate.
+     *
+     * @return a birthdate
+     */
     public Date getBirthdate() {
         return this.birthdate;
     }
 
+    /**
+     * Returns a recluse's genre.
+     *
+     * @return a genre
+     */
     public String getGenre() {
         return this.genre;
     }
 
+    /**
+     * Returns a recluse's disease.
+     *
+     * @return a disease
+     */
     public String getDisease() {
         return this.disease;
     }
 
+    /**
+     * Returns a recluse's cause.
+     *
+     * @return a cause
+     */
     public String getCause() {
         return this.cause;
     }
 
+    /**
+     * Returns a recluse's cell.
+     *
+     * @return a cell
+     */
     public String getCell() {
         return this.cell;
     }
 
-    //Setters
-    public void setRecluse_name(String recluse_name) {
-        this.recluse_name = recluse_name;
+    /**
+     * Updates a recluse's name.
+     *
+     * @param recluseName a new recluse's name
+     */
+    public void setRecluseName(String recluseName) {
+        this.recluseName = recluseName;
     }
 
+    /**
+     * Updates a recluse's birthdate.
+     *
+     * @param birthdate a new recluse's birthdate
+     */
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
 
+    /**
+     * Updates a recluse's genre.
+     *
+     * @param genre a new recluse's genre
+     */
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
+    /**
+     * Updates a recluse's disease.
+     *
+     * @param disease a new recluse's disease
+     */
     public void setDisease(String disease) {
         this.disease = disease;
     }
 
+    /**
+     * Updates a recluse's cause.
+     *
+     * @param cause a new recluse's cause
+     */
     public void setCause(String cause) {
         this.cause = cause;
     }
 
+    /**
+     * Updates a recluse's cell.
+     *
+     * @param cell a new recluse's cell
+     */
     public void setCell(String cell) {
         this.cell = cell;
     }
@@ -117,7 +181,7 @@ public class Recluse {
         StringBuilder s = new StringBuilder();
 
         s.append("Recluse:\n");
-        s.append("Recluse's name: " + this.recluse_name + ".\n");
+        s.append("Recluse's name: " + this.recluseName + ".\n");
         s.append("Recluse's birthdate: " + this.birthdate + ".\n");
         s.append("Recluse's genre: " + this.genre + ".\n");
         s.append("Recluse's disease: " + this.disease + ".\n");
@@ -144,7 +208,7 @@ public class Recluse {
         }
         Recluse test = (Recluse) o;
 
-        return test.recluse_name.equals(this.recluse_name) &&
+        return test.recluseName.equals(this.recluseName) &&
                 test.birthdate.equals(this.birthdate) && test.genre.equals(this.genre)
                 && test.disease.equals(this.disease) && test.cause.equals(this.cause)
                 && test.cell.equals(this.cell);
