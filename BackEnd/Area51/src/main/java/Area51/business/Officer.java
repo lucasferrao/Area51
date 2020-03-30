@@ -19,6 +19,17 @@ public class Officer {
     }
 
     /**
+     * Officer's default constructor.
+     */
+    public Officer(String idOfficerLogin, String password){
+        this.idOfficerLogin = idOfficerLogin;
+        this.email = "";
+        this.password = password;
+        this.address = "";
+        this.phoneNumber = 0;
+    }
+
+    /**
      * Officer's parametrized constructor.
      *
      * @param idOfficerLogin Officer's login username
@@ -137,5 +148,16 @@ public class Officer {
      */
     public Officer clone(){
         return new Officer(this);
+    }
+
+    /**
+     * Verifies if the ID and password gaven matches the officer's ID and passowrd
+     *
+     * @param id officer's id
+     * @param password officer's password
+     * @return true if matches, false if not
+     */
+    public boolean validateCredentials(String id, String password) {
+        return this.idOfficerLogin == id && this.password.equals(password);
     }
 }

@@ -1,7 +1,8 @@
 package Area51.business;
 
+import java.sql.Date;
 import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Represents someone that is in prison.
@@ -12,7 +13,7 @@ import java.util.Date;
 
 public class Recluse {
     private String recluseName;
-    private Date birthdate;
+    private LocalDate birthdate;
     private String genre;
     private String disease;
     private String cause;
@@ -23,7 +24,7 @@ public class Recluse {
      */
     public Recluse(){
         this.recluseName = "";
-        this.birthdate = Date.from(Instant.now());
+        this.birthdate = LocalDate.now();
         this.genre = "";
         this.disease = "";
         this.cause = "";
@@ -40,7 +41,7 @@ public class Recluse {
      * @param cause Recluse's jail cause
      * @param cell Recluse's cell number
      */
-    public Recluse(String recluseName, Date birthdate, String genre, String disease,
+    public Recluse(String recluseName, LocalDate birthdate, String genre, String disease,
                    String cause, String cell){
         this.recluseName = recluseName;
         this.birthdate = birthdate;
@@ -78,7 +79,7 @@ public class Recluse {
      *
      * @return a birthdate
      */
-    public Date getBirthdate() {
+    public LocalDate getBirthdate() {
         return this.birthdate;
     }
 
@@ -132,7 +133,7 @@ public class Recluse {
      *
      * @param birthdate a new recluse's birthdate
      */
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 
@@ -221,5 +222,16 @@ public class Recluse {
      */
     public Recluse clone(){
         return new Recluse(this);
+    }
+
+    /**
+     *
+     * @param valueOf
+     * @return
+     */
+    public LocalDate toLocalDate(Date valueOf) {
+        LocalDate date = valueOf.toLocalDate();
+        this.birthdate = date;
+        return date;
     }
 }

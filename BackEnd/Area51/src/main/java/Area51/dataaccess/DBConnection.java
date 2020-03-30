@@ -2,9 +2,19 @@ package Area51.dataaccess;
 
 import Area51.business.*;
 import Area51.business.Recluse;
+import Area51.business.exceptions.WrongCredentialsException;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * This is the class that connects to database.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 
 public class DBConnection {
     private Connection con;
@@ -40,7 +50,7 @@ public class DBConnection {
      * @param cell recluse's cell.
      * @return the new recluse's data.
      */
-    public Recluse newRecluse(String recluse_name, Date birthdate, String genre, String disease,
+    public Recluse newRecluse(String recluse_name, LocalDate birthdate, String genre, String disease,
                               String cause, String cell){
         Recluse recluse = new Recluse();
 
@@ -49,7 +59,7 @@ public class DBConnection {
                     " VALUES (?, ?, ?, ?, ?, ?);";
             preparedStmt = con.prepareStatement(query);
             preparedStmt.setString(1, recluse_name);
-            preparedStmt.setDate(2, birthdate);
+            preparedStmt.setDate(2, java.sql.Date.valueOf(birthdate));
             preparedStmt.setString(3, genre);
             preparedStmt.setString(4, disease);
             preparedStmt.setString(5, cause);
@@ -96,7 +106,7 @@ public class DBConnection {
                 String cause = rs.getString("cause");
                 String cell = rs.getString("cell");
                 recluse.setRecluseName(recluse_name);
-                recluse.setBirthdate(birthdate);
+                recluse.setBirthdate(birthdate.toLocalDate());
                 recluse.setGenre(genre);
                 recluse.setDisease(disease);
                 recluse.setCause(cause);
@@ -112,27 +122,95 @@ public class DBConnection {
     }
 
     /**
-    public List<Recluse> getAllRecluses(){
+     * Method that gives the number of rows of a table.
+     *
+     * @param table_name database table's name
+     * @return a count
+     */
+    public int getCountRows(String table_name){
+        int count = 0;
+
         try{
-            List<Recluse> recluses = new ArrayList<Recluse>();
-            String query = "SELECT * FROM recluse";
+            String query = "SELECT COUNT(*)FROM " + table_name + ";";
             rs = st.executeQuery(query);
-            System.out.println(rs);
-            while(rs.next()){
+            rs.next();
+            count += rs.getInt(1);
 
-
-                Recluse r = new Recluse();
-                String recluseName = rs.getString("recluseName");
-                System.out.println(recluseName);
-                return recluses;
-            }
         }catch(Exception e){
             System.out.println(e);
         }
-        return getAllRecluses(); //?????
-    }
-     **/
 
+        return count;
+    }
+
+    /**
+     * Method that shows all officers from database.
+     *
+     * @return a list with all officers
+     */
+    public List<Officer> getAllOfficers(){
+         List<Officer> officers = new ArrayList<Officer>();
+
+         try{
+             String query = "SELECT * FROM officer";
+             rs = st.executeQuery(query);
+             while(rs.next()){
+
+                 Officer officer = new Officer();
+                 String id_officer_login = rs.getString("id_officer_login");
+                 String email = rs.getString("email");
+                 String login_password = rs.getString("login_password");
+                 String officer_address = rs.getString("officer_address");
+                 int phone_number = rs.getInt("phone_number");
+                 officer.setIdOfficerLogin(id_officer_login);
+                 officer.setEmail(email);
+                 officer.setPassword(login_password);
+                 officer.setAddress(officer_address);
+                 officer.setPhoneNumber(phone_number);
+
+                 officers.add(officer);
+            }
+         }catch(Exception e){
+             e.printStackTrace();
+         }
+
+         return officers;
+    }
+
+    /**
+     * Gives all data from all recluses.
+     *
+     * @return a list of all recluses
+     */
+    public List<Recluse> getAllRecluses(){
+        List<Recluse> recluses = new ArrayList<Recluse>();
+
+        try{
+            String query = "SELECT * FROM recluse";
+            rs = st.executeQuery(query);
+            while(rs.next()){
+
+                Recluse recluse = new Recluse();
+                String recluse_name = rs.getString("recluse_name");
+                Date birthdate = rs.getDate("birthdate");
+                String genre = rs.getString("genre");
+                String disease = rs.getString("disease");
+                String cause = rs.getString("cause");
+                String cell = rs.getString("cell");
+                recluse.setRecluseName(recluse_name);
+                recluse.setBirthdate(birthdate.toLocalDate());
+                recluse.setGenre(genre);
+                recluse.setDisease(disease);
+                recluse.setCause(cause);
+                recluse.setCell(cell);
+
+                recluses.add(recluse);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return recluses;
+    }
 
 
     /**
@@ -164,7 +242,7 @@ public class DBConnection {
             }
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return officer;
@@ -188,7 +266,7 @@ public class DBConnection {
             }
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return visitor;
@@ -214,7 +292,7 @@ public class DBConnection {
             }
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return visit;
@@ -244,7 +322,7 @@ public class DBConnection {
             }
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return device;
@@ -271,7 +349,7 @@ public class DBConnection {
             }
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return alert;
@@ -295,7 +373,7 @@ public class DBConnection {
                 occurrence.setDate((java.sql.Date) occurrence_date);
             }
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return occurrence;
@@ -311,7 +389,7 @@ public class DBConnection {
                 System.out.println(id_occurrence);
             }
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
@@ -328,7 +406,7 @@ public class DBConnection {
      * @param cell new recluse's cell.
      * @return updated recluse's date.
      */
-    public Recluse updateRecluseDataByID(int id_recluse, String recluseName, Date birthdate, String genre,
+    public Recluse updateRecluseDataByID(int id_recluse, String recluseName, LocalDate birthdate, String genre,
                                      String disease, String cause, String cell){
         Recluse recluse = new Recluse();
 
@@ -342,7 +420,7 @@ public class DBConnection {
             preparedStmt = con.prepareStatement(query);
 
             preparedStmt.setString(1, recluseName);
-            preparedStmt.setDate(2, birthdate);
+            preparedStmt.setDate(2, java.sql.Date.valueOf(birthdate));
             preparedStmt.setString(3, genre);
             preparedStmt.setString(4, disease);
             preparedStmt.setString(5, cause);
@@ -352,45 +430,64 @@ public class DBConnection {
 
             con.close();
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
         return recluse;
     }
 
     /**
-     * Method that deletes all data from a recluse.
+     * Method that deletes all data from a table.
      *
-     * @param id_recluse recluse's id
+     * @param id id from a table
+     * @param table_name table name
      * @return a boolean that indicates if the query was executed.
      */
-    public boolean deleteRecluseDataByID(int id_recluse){
+    public boolean deleteDataByID(int id, String table_name){
         boolean deleted = false;
-        int worked = 0;
-
+        int countRows = getCountRows(table_name);
+        int count = 0;
 
         try{
-            String query = "DELETE FROM recluse WHERE id_recluse = ?;";
+            String query = "DELETE FROM " + table_name  + " WHERE id_" + table_name + " = " + id + ";";
             preparedStmt = con.prepareStatement(query);
-            preparedStmt.setInt(1, id_recluse);
 
-            worked = preparedStmt.executeUpdate();
+            preparedStmt.executeUpdate();
+            count = getCountRows(table_name);
 
             con.close();
-            return deleted;
 
         }catch(Exception e){
-            System.out.println(e);
+            e.printStackTrace();
         }
 
+        int total = countRows - count;
+        if(total == 1)
+            return true;
+        return false;
+    }
 
-        if(worked == 1){
-            deleted = true;
-        } else {
-            deleted = false;
+    /**
+     * Method that allows a officer to login.
+     *
+     * @param id officer's ID
+     * @param password officer's password
+     * @return Officer that logged in
+     * @throws WrongCredentialsException if the credentials gaven do not matches to none registered officer.
+     */
+    public boolean login(String id, String password) throws WrongCredentialsException {
+        Officer officer = new Officer(id, password);
+        List<Officer> officers = getAllOfficers();
+
+        if (officer == null)
+            throw new WrongCredentialsException();
+
+        for(Officer o : officers){
+            if(id.equals(o.getIdOfficerLogin()) && password.equals(o.getPassword())){
+                return true;
+            }
         }
 
-
-        return deleted;
+        throw new WrongCredentialsException();
     }
 }
