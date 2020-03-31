@@ -30,6 +30,16 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager">
+    <configuration name="All in test" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/backend/test.http">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -44,7 +54,9 @@
       <workItem from="1585262217912" duration="863000" />
       <workItem from="1585323059946" duration="4836000" />
       <workItem from="1585443246817" duration="625000" />
-      <workItem from="1585480360074" duration="6655000" />
+      <workItem from="1585480360074" duration="7967000" />
+      <workItem from="1585569505112" duration="1284000" />
+      <workItem from="1585679108050" duration="642000" />
     </task>
     <servers />
   </component>
