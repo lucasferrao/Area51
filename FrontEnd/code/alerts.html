@@ -5,15 +5,17 @@
 
     <script>
         function getAlertInfo(){
-            var type = document.getElementById('type').value;
+            alert("ola");
+            var type = document.getElementById('this.type').value;
 
             var ajaxRequest = new XMLHttpRequest();
             ajaxRequest.onreadystatechange = function(){
                 if(ajaxRequest.readyState == 4){
                     if(ajaxRequest.status == 200){
                         var alert = JSON.parse(ajaxRequest.responseText);
-                        document.getElementById('date').value = alert.date;
-                        document.getElementById('hour').value = alert.hour;
+                        document.getElementById(this.type).value = this.type;
+                        document.getElementById(this.date).value = this.date;
+                        document.getElementById(this.hour).value = this.hour;
                     }
                 }
             }
@@ -113,10 +115,10 @@
                             <tbody>
                             <tr>
                                 <td style="color: black">1</td>
-                                <td style="color: black">type</td>
+                                <td style="color: black">this.type</td>
                                 <td style="color: black">Sensor de Movimento</td>
-                                <td style="color: black">date</td>
-                                <td style="color: black">hour</td>
+                                <td style="color: black">alert.date</td>
+                                <td style="color: black">alert.hour</td>
                                 <td style="color: black">22-11-2019-15-30.pdf</td>
                             </tr>
 

@@ -15,13 +15,13 @@ public class AlertServlet extends HttpServlet {
         String requestUrl = request.getRequestURI();
         String type = requestUrl.substring("/Alert/".length());
 
-        Alert alert = DBConnection.getInstance().getAlertData(type);   /*Temos algo parecido com  DataStore??? É a DBConnection??? Tenho de pôr getAlertData*/
+        Alert alert = DBConnection.getInstance().getAlertData(type);
 
         if(alert != null){
             String json = "{\n";
             json += "\"Tipo\": " + JSONObject.quote(alert.getType()) + ",\n";
             json += "\"Data\": " + JSONObject.quote(alert.getDate()) + ",\n";
-            json += "\"Horas\": " + alert.getHour() + "\n";
+            json += "\"Horas\": " + JSONObject.quote(alert.getHour()) + "\n";
             json += "}";
             response.getOutputStream().println(json);
         }
