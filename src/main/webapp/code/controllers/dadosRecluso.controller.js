@@ -106,7 +106,7 @@ function refreshDadosRecluse(id) {
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
 }
 
-function preencherListaDeReclusos() {
+async function preencherListaDeReclusos() {
     let response = await fetch(reclusosServer);
     let idsReclusos = await response.json();
 
