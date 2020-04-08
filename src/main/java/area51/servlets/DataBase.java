@@ -89,4 +89,125 @@ public class DataBase {
         }
         return sol;
     }
+
+    //Historico de Ocorrencias
+
+    public static ArrayList<String> getHistOccurrences() {
+        Connection conn = DataBase.getConnection();
+        PreparedStatement stmt = null;
+        ArrayList<String> sol = new ArrayList<>();
+
+        try {
+
+            String sql = "SELECT id_occurrence, occurrence_date, occurrence_subject, occurrence_description FROM occurrence";
+            stmt = conn.prepareStatement(sql);
+
+            ResultSet rs = stmt.executeQuery();
+            ResultSetMetaData meta = rs.getMetaData();
+
+
+            while (rs.next()) {
+                StringBuilder json = new StringBuilder();
+
+                json.append('{');
+                for(int i = 1; i <= meta.getColumnCount(); i++) {
+                    json.append('"').append(i - 1).append('"');
+                    json.append(':').append('"').append(rs.getString(i)).append('"');
+                    json.append(',');
+                }
+
+                json.deleteCharAt(json.length() - 1);
+
+                json.append('}');
+
+                sol.add(json.toString());
+            }
+
+            conn.close();
+            stmt.close();
+            rs.close();
+            System.out.println(sol);
+        } catch (Exception se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }//Handle errors for Class.forName
+        finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }// nothing we can do
+
+            try {
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }
+        return sol;
+    }
+
+
+    //Historico de Visitas
+
+    public static ArrayList<String> getHistRecluseVisits() {
+        Connection conn = DataBase.getConnection();
+        PreparedStatement stmt = null;
+        ArrayList<String> sol = new ArrayList<>();
+
+        try {
+
+            String sql = "SELECT id_visit, visitor_name, nif, visit_date, checkin, checkout FROM visit, visitor WHERE visit.id_visitor=visitor.id_visitor;";
+            stmt = conn.prepareStatement(sql);
+
+            ResultSet rs = stmt.executeQuery();
+            ResultSetMetaData meta = rs.getMetaData();
+
+
+            while (rs.next()) {
+                StringBuilder json = new StringBuilder();
+
+                json.append('{');
+                for(int i = 1; i <= meta.getColumnCount(); i++) {
+                    json.append('"').append(i - 1).append('"');
+                    json.append(':').append('"').append(rs.getString(i)).append('"');
+                    json.append(',');
+                }
+
+                json.deleteCharAt(json.length() - 1);
+
+                json.append('}');
+
+                sol.add(json.toString());
+            }
+
+            conn.close();
+            stmt.close();
+            rs.close();
+            System.out.println(sol);
+        } catch (Exception se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }//Handle errors for Class.forName
+        finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }// nothing we can do
+
+            try {
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }
+        return sol;
+    }
+
+
 }

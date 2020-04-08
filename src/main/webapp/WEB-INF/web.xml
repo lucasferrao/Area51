@@ -20,6 +20,14 @@
         <servlet-name>recluse</servlet-name>
         <servlet-class>area51.servlets.RecluseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>historicOccurrences</servlet-name>
+        <servlet-class>area51.servlets.historicOccurrences</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>visitsperRecluse</servlet-name>
+        <servlet-class>area51.servlets.visitsperRecluse</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -34,6 +42,14 @@
     <servlet-mapping>
         <servlet-name>recluse</servlet-name>
         <url-pattern>/recluse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>historicOccurrences</servlet-name>
+        <url-pattern>/HistOccurrences</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>visitsperRecluse</servlet-name>
+        <url-pattern>/visitsperRecluse</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
