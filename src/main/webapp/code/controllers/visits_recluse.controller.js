@@ -47,11 +47,20 @@
 
 
 const serverVisitsRecluse = '/Area51/visitsperRecluse';
+$(document).ready(function() {
+    $('.dataTables_paginate').addClass("btn-group datatable-pagination");
+    $('.dataTables_paginate > a').wrapInner('<span />');
+    $('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
+    $('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
 
-$("#dataTableVisitsRecluse").dataTable({
-    "ajax": {
-        "url": serverVisitsRecluse,
-        "type": "GET",
-        "dataSrc": ""
-    }
+    let urlParams = new URLSearchParams(window.location.search);
+    let recluseId = urlParams.has('id') ? urlParams.get('id') : 1;
+
+    $("#dataTableVisitsRecluse").dataTable({
+        "ajax": {
+            "url": serverVisitsRecluse + "?id=" + recluseId,
+            "type": "GET",
+            "dataSrc": ""
+        }
+    });
 });

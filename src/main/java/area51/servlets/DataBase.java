@@ -3,6 +3,8 @@ package area51.servlets;
 
 //import javax.jms.Connection;
 
+import org.eclipse.jetty.util.ajax.JSON;
+
 import java.sql.Connection;
 
 import java.util.*;
@@ -92,35 +94,30 @@ public class DataBase {
 
     //Historico de Ocorrencias
 
-    public static ArrayList<String> getHistOccurrences() {
+    public static ArrayList<Map<Integer, String>> getHistOccurrences(String recluseId) {
         Connection conn = DataBase.getConnection();
         PreparedStatement stmt = null;
-        ArrayList<String> sol = new ArrayList<>();
+        ArrayList<Map<Integer, String>> sol = new ArrayList<>();
 
         try {
 
-            String sql = "SELECT id_occurrence, occurrence_date, occurrence_subject, occurrence_description FROM occurrence";
+            String sql = "SELECT id_occurrence, occurrence_date, occurrence_subject, occurrence_description FROM occurrence"
+                     + " WHERE id_recluse=?";
             stmt = conn.prepareStatement(sql);
+            stmt.setString(1, recluseId);
 
             ResultSet rs = stmt.executeQuery();
             ResultSetMetaData meta = rs.getMetaData();
 
 
             while (rs.next()) {
-                StringBuilder json = new StringBuilder();
+                Map<Integer, String> dadosRecluso = new HashMap<>();
 
-                json.append('{');
                 for(int i = 1; i <= meta.getColumnCount(); i++) {
-                    json.append('"').append(i - 1).append('"');
-                    json.append(':').append('"').append(rs.getString(i)).append('"');
-                    json.append(',');
+                    dadosRecluso.put(i - 1, rs.getString(i));
                 }
 
-                json.deleteCharAt(json.length() - 1);
-
-                json.append('}');
-
-                sol.add(json.toString());
+                sol.add(dadosRecluso);
             }
 
             conn.close();
@@ -152,14 +149,65 @@ public class DataBase {
 
     //Historico de Visitas
 
-    public static ArrayList<String> getHistRecluseVisits() {
+    public static ArrayList<Map<Integer, String>> getHistRecluseVisits(String recluseId) {
+        Connection conn = DataBase.getConnection();
+        PreparedStatement stmt = null;
+        ArrayList<Map<Integer, String>> sol = new ArrayList<>();
+
+        try {
+
+            String sql = "SELECT id_visit, visitor_name, nif, visit_date, checkin, checkout FROM visit, visitor" + " WHERE visit.id_visitor=visitor.id_visitor AND id_recluse=?";
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, recluseId);
+
+            ResultSet rs = stmt.executeQuery();
+            ResultSetMetaData meta = rs.getMetaData();
+
+
+            while (rs.next()) {
+                Map<Integer, String> dadosRecluso = new HashMap<>();
+
+                for(int i = 1; i <= meta.getColumnCount(); i++) {
+                    dadosRecluso.put(i - 1, rs.getString(i));
+                }
+
+                sol.add(dadosRecluso);
+            }
+
+            conn.close();
+            stmt.close();
+            rs.close();
+            System.out.println(sol);
+        } catch (Exception se) {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }//Handle errors for Class.forName
+        finally {
+            //finally block used to close resources
+            try {
+                if (stmt != null)
+                    stmt.close();
+            } catch (SQLException se2) {
+            }// nothing we can do
+
+            try {
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }//end finally try
+        }
+        return sol;
+    }
+
+    public static ArrayList<String> getVisits() {
         Connection conn = DataBase.getConnection();
         PreparedStatement stmt = null;
         ArrayList<String> sol = new ArrayList<>();
 
         try {
 
-            String sql = "SELECT id_visit, visitor_name, nif, visit_date, checkin, checkout FROM visit, visitor WHERE visit.id_visitor=visitor.id_visitor;";
+            String sql = "SELECT id_visit, id_recluse, visitor_name, nif, checkin FROM visit, visitor WHERE visit.id_visitor=visitor.id_visitor";
             stmt = conn.prepareStatement(sql);
 
             ResultSet rs = stmt.executeQuery();
@@ -208,6 +256,5 @@ public class DataBase {
         }
         return sol;
     }
-
 
 }

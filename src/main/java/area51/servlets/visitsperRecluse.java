@@ -1,5 +1,7 @@
 package area51.servlets;
 
+import org.eclipse.jetty.util.ajax.JSON;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -7,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class visitsperRecluse extends HttpServlet {
 
@@ -46,11 +49,14 @@ public class visitsperRecluse extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ArrayList<String> dur = DataBase.getHistRecluseVisits();
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("application/json");
+
+        ArrayList<Map<Integer, String>> dur = DataBase.getHistRecluseVisits(request.getParameter("id"));
         response.setContentType("application/json");
         // response.setContentType("text/plain");
         response.setCharacterEncoding("UTF-8");
-        response.getWriter().println(dur);
+        response.getWriter().println(JSON.toString(dur));
         // response.getWriter().println("Context path: " + request.getServletContext().getContextPath());
     }
     /**
