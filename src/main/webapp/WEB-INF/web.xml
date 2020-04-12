@@ -41,7 +41,7 @@
 
     <servlet-mapping>
         <servlet-name>alerts</servlet-name>
-        <url-pattern>/alerts</url-pattern>
+        <url-pattern>/alerts/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

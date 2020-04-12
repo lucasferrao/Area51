@@ -156,13 +156,13 @@ public class DataBase {
 
         try {
 
-            String sql = "SELECT id_visit, visitor_name, nif, visit_date, checkin, checkout FROM visit, visitor" + " WHERE visit.id_visitor=visitor.id_visitor AND id_recluse=?";
+            String sql = "SELECT id_visit, visitor_name, nif, visit_date, checkin, checkout FROM visit, visitor" + " WHERE visit.id_visitor=visitor.id_visitor AND id_recluse=? AND checkout is not null ";
             stmt = conn.prepareStatement(sql);
             stmt.setString(1, recluseId);
 
             ResultSet rs = stmt.executeQuery();
             ResultSetMetaData meta = rs.getMetaData();
-
+            // rs.getString("count_alerts");
 
             while (rs.next()) {
                 Map<Integer, String> dadosRecluso = new HashMap<>();
@@ -207,7 +207,7 @@ public class DataBase {
 
         try {
 
-            String sql = "SELECT id_visit, id_recluse, visitor_name, nif, checkin FROM visit, visitor WHERE visit.id_visitor=visitor.id_visitor";
+            String sql = "SELECT id_visit, id_recluse, visitor_name, nif, checkin FROM visit, visitor WHERE visit.id_visitor=visitor.id_visitor AND checkout is null ";
             stmt = conn.prepareStatement(sql);
 
             ResultSet rs = stmt.executeQuery();

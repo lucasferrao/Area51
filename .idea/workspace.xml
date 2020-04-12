@@ -7,17 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74512a1e-aaa4-4a43-bf5c-19e8113940f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/area51/servlets/visits.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/area51/servlets/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/area51/servlets/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/area51/servlets/historicOccurrences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/area51/servlets/historicOccurrences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/area51/servlets/visitsperRecluse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/area51/servlets/visitsperRecluse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/area51/servlets/alerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/area51/servlets/alerts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/controllers/historicoOcorrencias.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/controllers/historicoOcorrencias.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/controllers/visits.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/controllers/visits.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/controllers/visits_recluse.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/controllers/visits_recluse.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/alerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/alerts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/controllers/dadosRecluso.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/controllers/dadosRecluso.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/code/recluse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/recluse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/code/visits.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/visits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/code/visitsperRecluse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/code/visitsperRecluse.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -794,7 +790,37 @@
         </data>
       </server-settings>
       <predefined_log_file enabled="true" id="Jetty" />
+      <ConfigurationWrapper VM_VAR="" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -839,7 +865,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Jetty Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -869,7 +895,8 @@
       <workItem from="1586380867921" duration="3000" />
       <workItem from="1586380904019" duration="29000" />
       <workItem from="1586380951593" duration="1015000" />
-      <workItem from="1586443074593" duration="8538000" />
+      <workItem from="1586443074593" duration="9589000" />
+      <workItem from="1586702444959" duration="12917000" />
     </task>
     <servers />
   </component>
@@ -881,10 +908,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Inspections/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1585483475854" />
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586381124512">
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586709226147">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586381124512" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586709226147" />
     <state x="438" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585482274650">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -894,45 +921,54 @@
     </state>
     <state x="131" y="57" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1586470686042" />
     <state x="147" y="65" key="DiffContextDialog/0.0.1536.824/1920.121.1152.680@0.0.1536.824" timestamp="1585771771667" />
-    <state width="905" height="271" key="GridCell.Tab.0.bottom" timestamp="1586469810338">
+    <state width="905" height="271" key="GridCell.Tab.0.bottom" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586469810338" />
-    <state width="905" height="271" key="GridCell.Tab.0.center" timestamp="1586469810337">
+    <state width="905" height="271" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.0.center" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586469810337" />
-    <state width="905" height="271" key="GridCell.Tab.0.left" timestamp="1586469810337">
+    <state width="905" height="271" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.0.left" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586469810337" />
-    <state width="905" height="271" key="GridCell.Tab.0.right" timestamp="1586469810337">
+    <state width="905" height="271" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.0.right" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586469810337" />
-    <state width="905" height="271" key="GridCell.Tab.1.bottom" timestamp="1586469810338">
+    <state width="905" height="271" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.1.bottom" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586469810338" />
-    <state width="905" height="271" key="GridCell.Tab.1.center" timestamp="1586469810338">
+    <state width="905" height="271" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.1.center" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586469810338" />
-    <state width="905" height="271" key="GridCell.Tab.1.left" timestamp="1586469810338">
+    <state width="905" height="271" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.1.left" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586469810338" />
-    <state width="905" height="271" key="GridCell.Tab.1.right" timestamp="1586469810338">
+    <state width="905" height="271" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state width="905" height="271" key="GridCell.Tab.1.right" timestamp="1586726093880">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="905" height="271" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586469810338" />
+    <state width="905" height="271" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586726093880" />
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1586724932107">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1586724932107" />
+    <state x="395" y="79" key="MultipleFileMergeDialog" timestamp="1586470868183">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="79" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1586470868183" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1586381056104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586381056104" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585771783479">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="321" y="128" key="Vcs.Push.Dialog.v2" timestamp="1586470881012">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="321" y="128" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586470881012" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.121.1152.680@0.0.1536.824" timestamp="1585771783479" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585353728821" />
     <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585771689617">
@@ -944,6 +980,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586470796041" />
+    <state x="244" y="99" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586709566174">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="244" y="99" width="877" height="603" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1586709566174" />
     <state x="484" y="155" key="git4idea.merge.GitMergeDialog" timestamp="1586470399383">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -954,9 +994,13 @@
     <state x="448" y="180" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1586470408207" />
     <state x="504" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824/1920.121.1152.680@0.0.1536.824" timestamp="1585771814356" />
     <state x="504" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1585353720798" />
-    <state x="297" y="-6" width="670" height="676" key="search.everywhere.popup" timestamp="1585426968842">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="317" y="-6" width="716" height="724" key="search.everywhere.popup" timestamp="1586709333494">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="297" y="-6" width="670" height="676" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585426968842" />
+    <state x="317" y="-6" width="716" height="724" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586709333494" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/area51$Jetty_9_4_27_v20200227.ic" NAME="Jetty 9.4.27.v20200227 Coverage Results" MODIFIED="1586471153349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
