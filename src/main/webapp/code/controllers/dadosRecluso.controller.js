@@ -3,8 +3,11 @@ window.onload = async function () {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
     let urlParams = new URLSearchParams(window.location.search);
     let recluseId = urlParams.has('id') ? urlParams.get('id') : 1;
+
     refreshDadosRecluse(recluseId);
     validator();
+    $("#aHistoricoVisitas").attr('href', 'visitsperRecluse.html?id=' + recluseId);
+
     const dadosRecluso = document.getElementById('dadosRecluso');
     dadosRecluso.addEventListener('submit', function (e) {
         e.preventDefault();
