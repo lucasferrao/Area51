@@ -1,9 +1,8 @@
 
-const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
+const server = '/Area51/login';
 //quando inicia a página faz
 window.onload = function () {
     //chama a função para atualizar os users
-
     //refreshUser(); //adicionar função de validação ao formulário
     validator();
 
