@@ -23,7 +23,7 @@ window.onload = function () {
 
         fetch('', {
             fetch(`${server}/signin`, {
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             method: 'POST',
             body: `username=${username}&password=${password}`
         }).then(function (response) {
@@ -36,74 +36,75 @@ window.onload = function () {
                 document.getElementById("id_officer_login").reset(); //limpeza dos dados do form
                 const valor = permissoes(`${username}`);
                 console.log(valor);
-                if(valor) {
+                if (valor) {
                     window.location.replace("")
+                } else {
                 }
-                else {}
             }
         }).then(function (result) {
             console.log(result);
         }).catch(function (err) {
-            alert("Erro no login!" + err); console.error(err);
+            alert("Erro no login!" + err);
+            console.error(err);
         });
-    });
+    })
+        ;
 
 
-
-    /*function permissoes(username) {
-        async function fetchAsync() {
-            //const username = document.getElementById("id_officer_login").value;
-            let txt = [];
-            const response = await fetch('');
-            const user_profile = await response.json();
-            let i=0;
-            console.log(this.email);
-            for (const user of user_profile) {
-                if(user.email == email) {
-                    sessionStorage.token = user.email;
-                    console.log(sessionStorage.token);
-                    if(user.id_login_type == 4) {
-                        txt[i] = 1;
-                        console.log(user.id_login_type);
-                        console.log(user.email);
-                        console.log(txt[i]);
-                        swal.fire({
-                            position: 'center',
-                            type: 'success',
-                            title: 'Login efetuado com sucesso!',
-                            text: 'Bem-vindo administrador ' + user.user_profile_name,
-                            showConfirmButton: false,
-                            timer: 3000
-                        })
-                            .then(() => {
-                                window.location.replace("../view/Statistics.html")} )
-                    }
-                    else {
-                        if(user.id_login_type != 4) {
+        /*function permissoes(username) {
+            async function fetchAsync() {
+                //const username = document.getElementById("id_officer_login").value;
+                let txt = [];
+                const response = await fetch('');
+                const user_profile = await response.json();
+                let i=0;
+                console.log(this.email);
+                for (const user of user_profile) {
+                    if(user.email == email) {
+                        sessionStorage.token = user.email;
+                        console.log(sessionStorage.token);
+                        if(user.id_login_type == 4) {
+                            txt[i] = 1;
+                            console.log(user.id_login_type);
+                            console.log(user.email);
+                            console.log(txt[i]);
                             swal.fire({
                                 position: 'center',
                                 type: 'success',
                                 title: 'Login efetuado com sucesso!',
-                                text: 'Bem-vindo utilizador ' + user.user_profile_name,
+                                text: 'Bem-vindo administrador ' + user.user_profile_name,
                                 showConfirmButton: false,
                                 timer: 3000
                             })
                                 .then(() => {
-                                    window.location.replace("../view/index.html")} )
+                                    window.location.replace("../view/Statistics.html")} )
                         }
-                        else{
-                            txt[i] = 0;
-                            i++;
+                        else {
+                            if(user.id_login_type != 4) {
+                                swal.fire({
+                                    position: 'center',
+                                    type: 'success',
+                                    title: 'Login efetuado com sucesso!',
+                                    text: 'Bem-vindo utilizador ' + user.user_profile_name,
+                                    showConfirmButton: false,
+                                    timer: 3000
+                                })
+                                    .then(() => {
+                                        window.location.replace("../view/index.html")} )
+                            }
+                            else{
+                                txt[i] = 0;
+                                i++;
+                            }
                         }
                     }
                 }
+                console.log(txt);
+
+
             }
-            console.log(txt);
+            //chama a função fetchAsync()
+            fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
 
-
-        }
-        //chama a função fetchAsync()
-        fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
-
-    }*/
-}
+        }*/
+    }
