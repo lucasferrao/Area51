@@ -28,32 +28,33 @@ public class DbConnection {
         Connection con;
         Statement st;
         ResultSet rs;
-        
-        try
-        {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/YrTGCBVRUv?autoReconnect=true&useSSL=false","YrTGCBVRUv","8hjO0RSz1p");
-            st = con.createStatement();
-            rs = st.executeQuery("SELECT * FROM alert");
-            
-            while(rs.next())
-            {
-                System.out.println("ID do alerta : " + rs.getInt ("id_alert") + " Tipo de Alerta : " + rs.getString ("alert_type") + " Data : " + rs.getString ("alert_date"));
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println("Error : " + e.getMessage());
-        }
-        
-    }
-    public Connection getCon(){
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
-        }catch (ClassNotFoundException ex) {
-            Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
+            con = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/YrTGCBVRUv?autoReconnect=true&useSSL=false", "YrTGCBVRUv", "8hjO0RSz1p");
+            st = con.createStatement();
+            rs = st.executeQuery("SELECT * FROM alert");
+
+            while (rs.next()) {
+                System.out.println("ID do alerta : " + rs.getInt("id_alert") + " Tipo de Alerta : " + rs.getString("alert_type") + " Data : " + rs.getString("alert_date"));
+            }
+        } catch (Exception e) {
+            System.out.println("Error : " + e.getMessage());
         }
-        return con;
     }
-    
+    Statement st;
+    ResultSet rs;
+        public Connection getCon () {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/YrTGCBVRUv?autoReconnect=true&useSSL=false", "YrTGCBVRUv", "8hjO0RSz1p");
+                st = con.createStatement();
+                rs = st.executeQuery("SELECT * FROM officer");
+
+                while (rs.next())
+                    System.out.println(rs.getString("id_officer_login") + rs.getString("login_password"));
+            } catch (Exception e) {
+            System.out.println("Error : " + e.getMessage());
+        } return con;
+    }
 }
