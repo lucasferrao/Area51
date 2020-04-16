@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -46,7 +48,36 @@ public class newRecluse extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-    }
+        response.setContentType("text/html;charset=UTF-8\"");
+        PrintWriter out = response.getWriter();
+
+        String name=request.getParameter("recluse_name");
+        String birth=request.getParameter("birthdate");
+        String genre=request.getParameter("genre");
+        String disease=request.getParameter("disease");
+        String cause=request.getParameter("cause");
+
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            DataBase con= DriverManager.getConnection();
+            PreparedStatement ps = con.prepareStatement("select recluse_name,birthdate,genre,disease,cause,cell from recluse where recluse_name=? and birthdate=? and genre=? and disease=? and cause=?");
+
+            ps.setString(1,name);
+            ps.setString(2,birth);
+            ps.setString(3,genre);
+            ps.setString(4,disease);
+            ps.setString(4,cause);
+
+            int i=ps.executeUpdate();
+            if(i>0)
+                out.print("Registado com Sucesso");
+
+
+        }catch (Exception e2) {System.out.println(e2);}
+
+        out.close();
+
+}
 
     /**
      * Returns a short description of the servlet.

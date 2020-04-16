@@ -87,7 +87,7 @@
 
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
                                         <div class="modal" id="abrirModal">
-                                            <form id="formUser" name="formUser" class="user">
+                                            <form id="formUser" name="formUser" class="user" action="servlet/newRecluse">
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Registo de Reclusos</h3>
@@ -95,7 +95,7 @@
                                                 <br>
                                                 <h5 align="center">
                                                     Nome:
-                                                        <input type="text" id="name1" size="35" name="nome">
+                                                        <input type="text" id="name" size="35" name="name">
                                                 </h5>
                                                 <h5 align="center">
                                                     Morada:
@@ -106,17 +106,12 @@
                                                         <input type="text" id="birth" size="35" name="date" placeholder="dd/mm/aaaa">
                                                 </h5>
                                                 <h5 align="center">
-                                                    Contactos:
-                                                        <input type="text" id="contacts" size="35" name="adress">
-                                                </h5>
-                                                <h5 align="center">
                                                     Doenças:
-                                                    <input type="text" id="disease1" size="50" name="adress">
+                                                    <input type="text" id="disease" size="50" name="disease">
                                                 </h5>
                                                 <h5 align="center">
-
                                                     Causa:
-                                                        <input type="text" id="cause1" size="50" name="cause" >
+                                                        <input type="text" id="cause" size="50" name="cause" >
                                                 </h5>
 
                                                 <div>
