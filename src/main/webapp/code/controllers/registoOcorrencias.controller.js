@@ -1,4 +1,4 @@
-const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
+const serverRegistoOcorrencia = '/Area51/registoOcorrencia';
 window.onload = async function ()
 {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
@@ -17,25 +17,25 @@ window.onload = async function ()
 function validator()
 {
     //validation function executer
-    let validar = new validar (document.querySelector('form[name="formUser"]'), function (err, res)
-        {
-            if (res)
-            {
-                saveRegistoOcorrencias();
-            }
-        },
-        {
-            //check if password is valid
-            rules:
-                {
-                    password: function(value)
-                    {
-                        return(value === document.getElementById("password").value);
-                    }
-                },
-
-
-        });
+    // let validar = new validar (document.querySelector('form[name="formUser"]'), function (err, res)
+    //     {
+    //         if (res)
+    //         {
+    //             saveRegistoOcorrencias();
+    //         }
+    //     },
+    //     {
+    //         //check if password is valid
+    //         rules:
+    //             {
+    //                 password: function(value)
+    //                 {
+    //                     return(value === document.getElementById("password").value);
+    //                 }
+    //             },
+    //
+    //
+    //     });
 }
 //function save
 function saveRegistoOcorrencias()
@@ -50,7 +50,7 @@ function saveRegistoOcorrencias()
     //debugg
     headeing
     //send data to server via POST and PUT
-    fetch(server,
+    fetch(serverRegistoOcorrencia,
         {rs:
                 {
                     'Content-Type': 'application/json'
@@ -98,7 +98,7 @@ function refreshRegistoOcorrencias() {
     async function fetchAsync() {
         const renderRegistoOcorrencias = document.getElementById("result");
         let txt = "";
-        const response = await fetch(server,);
+        const response = await fetch(serverRegistoOcorrencia,);
         const RegistoOcorrencias = await response.json();
         //results table
 

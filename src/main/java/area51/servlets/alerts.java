@@ -91,12 +91,13 @@ public class alerts extends HttpServlet {
             }
         }
 
-        stmt = conn.prepareStatement("SELECT id_device FROM alert ORDER BY `id_alert` DESC LIMIT 1");
+        stmt = conn.prepareStatement("SELECT id_alert, id_device FROM alert ORDER BY `id_alert` DESC LIMIT 1");
         ResultSet rs = stmt.executeQuery();
 
         if (rs.next()) {
             Map<String, Integer> res = new HashMap<>();
 
+            res.put("id", rs.getInt("id_alert"));
             res.put("sensor", rs.getInt("id_device"));
 
             response.setContentType("application/json");

@@ -1,4 +1,4 @@
-const server = 'jdbc:mysql://remotemysql.com/YrTGCBVRUv?useSSL=false';
+const serverNewRecluse = '/Area51/newRecluse';
 window.onload = async function ()
 {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
