@@ -1,6 +1,6 @@
 const serverRegistoOcorrencia = '/Area51/registoOcorrencia';
-window.onload = async function ()
-{
+// window.onload = async function (){
+$(document).ready(async function(){
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
     refreshRegistoOcorrencias();
     validator();
@@ -12,7 +12,7 @@ window.onload = async function ()
         //form validation
         validator();
     });
-}
+});
 //validation function
 function validator()
 {

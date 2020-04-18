@@ -1,15 +1,22 @@
 const serverAlertNotification = '/Area51/alerts/novosMovimentos';
 
-window.onload = async function () {
-    while(true) {
-        let response;
-        do {
-            response = await fetch(serverAlertNotification);
-        } while (!response.ok);
+function checkForAlerts() {
+    fetch(serverAlertNotification)
+        .then(response => response.json())
+        .then(alertJson => {
+            if(alertJson === false) {
+                checkForAlerts();
+                return;
+            }
 
-        let alertJson = await response.json();
+            // Recebido novo alerta! Processar o alerta.
+            window.location.href = "/Area51/code/sensorMovementAlert.html?id_alert=" + alertJson.id_alert
+                + "&id_device=" + alertJson.id_device
+                + "&alert_hour=" + alertJson.alert_hour;
+        })
+        .catch(() => {
+            checkForAlerts();
+        });
+}
 
-        // Foi recebido um novo alerta! Processar o alerta.
-        window.location.href = "/Area51/code/sensorMovementAlert.html?id=" + alertJson.id + "&id_device=" + alertJson.id_device;
-    }
-};
+$(document).ready(checkForAlerts);

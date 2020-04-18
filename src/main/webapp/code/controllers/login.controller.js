@@ -1,12 +1,13 @@
-
+/*
 const server = '/Area51/login';
 //quando inicia a página faz
-window.onload = function () {
+ window.onload = function () {
+//$(document).ready(async function() {
     //chama a função para atualizar os users
     //refreshUser(); //adicionar função de validação ao formulário
     validator();
 
-
+}
     document.getElementById("formLogin").onsubmit = function (e) {
         //validação do formulário ao submeter
         console.log("ola");
@@ -49,7 +50,7 @@ window.onload = function () {
         });
     })
         ;
-
+*/
 
         /*function permissoes(username) {
             async function fetchAsync() {
@@ -106,5 +107,5 @@ window.onload = function () {
             //chama a função fetchAsync()
             fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
 
-        }*/
-    }
+        }
+    }*/

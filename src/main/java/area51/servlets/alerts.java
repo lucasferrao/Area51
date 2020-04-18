@@ -58,14 +58,16 @@ public class alerts extends HttpServlet {
     }
 
     protected void processNewMovements(HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
-        Connection conn = DataBase.getConnection();
+        Connection conn = null;
         PreparedStatement stmt = null;
         int oldAlertCount = -1;
 
         final String sql = "SELECT COUNT(id_alert) AS 'count_alerts' FROM alert";
 
-        while (true) {
+        int numTries = 0;
+        while (numTries < 60) {
             // Verificar na base de dados se existe movimento novo
+            conn = DataBase.getConnection();
             stmt = conn.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -75,6 +77,7 @@ public class alerts extends HttpServlet {
                     // Existem novos alertas!! break!!
                     rs.close();
                     stmt.close();
+                    // Aqui não fechamos a ligação à base de dados, visto que a vamos usar já novamente!
                     break;
                 }
 
@@ -83,22 +86,35 @@ public class alerts extends HttpServlet {
 
             rs.close();
             stmt.close();
+            conn.close();
 
             try {
+                numTries++;
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
-        stmt = conn.prepareStatement("SELECT id_alert, id_device FROM alert ORDER BY `id_alert` DESC LIMIT 1");
+        if(numTries == 60) {
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().println("false");
+            response.setStatus(404);
+
+            return;
+        }
+
+        stmt = conn.prepareStatement("SELECT id_alert, id_device, alert_hour FROM alert ORDER BY `id_alert` DESC LIMIT 1");
         ResultSet rs = stmt.executeQuery();
 
         if (rs.next()) {
-            Map<String, Integer> res = new HashMap<>();
+            Map<String, String> res = new HashMap<>();
 
-            res.put("id", rs.getInt("id_alert"));
-            res.put("sensor", rs.getInt("id_device"));
+            res.put("id_alert", String.valueOf(rs.getInt("id_alert")));
+            res.put("id_device", String.valueOf(rs.getInt("id_device")));
+            res.put("alert_hour", rs.getTime("alert_hour")
+                    .toLocalTime().minusHours(1).format(DateTimeFormatter.ISO_TIME));
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");

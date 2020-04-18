@@ -47,6 +47,7 @@
 
 
 const serverVisitsRecluse = '/Area51/visitsperRecluse';
+
 $(document).ready(function() {
     $('.dataTables_paginate').addClass("btn-group datatable-pagination");
     $('.dataTables_paginate > a').wrapInner('<span />');

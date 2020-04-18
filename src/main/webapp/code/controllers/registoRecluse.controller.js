@@ -1,5 +1,7 @@
 const serverNewRecluse = '/Area51/newRecluse';
-window.onload = async function ()
+//
+ $(document).ready(function()
+//$(document).ready(async function()
 {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
     refreshRecluse();
@@ -12,7 +14,7 @@ window.onload = async function ()
         //form validation
         validator();
     });
-}
+});
 //validation function
 function validator()
 {

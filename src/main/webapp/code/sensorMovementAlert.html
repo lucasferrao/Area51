@@ -125,42 +125,44 @@
                             </div>
 
                             <hr>
-                            <div class="modal-body">
-                                <div class="stream-headline1">
-                                    <h5 align="center">
-                                        Data:
-                                        <input class="form-control form-control-user"  type="text" id="ocurrence_date" size="35" name="ocurrence_date" placeholder="dd/mm/aaaa">
-                                    </h5>
-                                    <h5 align="center">
-                                        ID do Alerta:
-                                        <input class="form-control form-control-user" type = "text" id="id_alert" size="35" placeholder="-----" >
-                                    </h5>
-                                    <h5 align="center">
-                                        ID do Officer:
-                                        <input class="form-control form-control-user" type = "text" id="id_officer" size="35" placeholder="-----" >
-                                    </h5>
-                                    <h5 align="center">
-                                        ID do Recluso:
-                                        <input class="form-control form-control-user" type = "text" id="id_recluse" size="35" placeholder="-----" >
-                                    </h5>
-                                    <h5 align="center">
-                                        Assunto:
-                                        <input class="labelAssunto" type = "text" id="occu_subject" size="35" value="text here"/>
-                                    </h5>
-                                    <h5 align="center">
-                                        Descrição:
-                                        <textarea class="labelDescricao" size="35" id= "occu_description" rows="3" cols="80">Your Text here</textarea>
-                                    </h5>
+                            <form method="post" action="/Area51/HistOccurrences" id="formNewOccurence">
+                                <div class="modal-body">
+                                    <div class="stream-headline1">
+                                        <h5 align="center">
+                                            Data:
+                                            <input class="form-control form-control-user"  type="date" id="ocurrence_date" size="35" name="ocurrence_date" placeholder="dd/mm/aaaa">
+                                        </h5>
+                                        <h5 align="center">
+                                            ID do Alerta:
+                                            <input class="form-control form-control-user" type = "text" id="id_alert" name="id_alert" size="35" placeholder="-----" >
+                                        </h5>
+                                        <h5 align="center">
+                                            ID do Officer:
+                                            <input class="form-control form-control-user" type = "number" id="id_officer" name="id_officer" size="35" placeholder="-----" >
+                                        </h5>
+                                        <h5 align="center">
+                                            ID do Recluso:
+                                            <input class="form-control form-control-user" type = "number" id="id_recluse" name="id_recluse" size="35" placeholder="-----" >
+                                        </h5>
+                                        <h5 align="center">
+                                            Assunto:
+                                            <input class="labelAssunto" type = "text" id="occu_subject" name="occu_subject" size="35" value="text here"/>
+                                        </h5>
+                                        <h5 align="center">
+                                            Descrição:
+                                            <textarea class="labelDescricao" size="35" id= "occu_description" name="occu_description" rows="3" cols="80">Your Text here</textarea>
+                                        </h5>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
-                                     <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
-                                     -->
-                                <a class="btn btn-danger" onclick="msg(Ocorrência registada com sucesso!)" href="sensorMovementAlert.html">Registar</a>
-                                <a class="btn btn-danger" href="sensorMovementAlert.html">Cancelar</a>
-                                <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
-                            </div>
+                                <div class="modal-footer">
+                                    <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
+                                         <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
+                                         -->
+                                    <a class="btn btn-danger" href="#" onclick="$('#formNewOccurence').submit();">Registar</a>
+                                    <a class="btn btn-danger" href="#">Cancelar</a>
+                                    <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
+                                </div>
+                            </form>
                         </div>
                     </div>
                         <!--Fim Janela Modal do Registar Ocorrência -->

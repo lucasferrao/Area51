@@ -1,13 +1,13 @@
-
-
 const serverVisits = '/Area51/visits';
 
-$("#dataTableVisits").dataTable({
-    "ajax": {
-        "url": serverVisits,
-        "type": "GET",
-        "dataSrc": ""
-    }
+$(document).ready(function() {
+    $("#dataTableVisits").dataTable({
+        "ajax": {
+            "url": serverVisits,
+            "type": "GET",
+            "dataSrc": ""
+        }
+    });
 });
 
 

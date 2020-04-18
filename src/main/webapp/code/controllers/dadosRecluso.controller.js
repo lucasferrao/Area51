@@ -1,5 +1,6 @@
 const reclusosServer = '/Area51/recluse';
-window.onload = async function () {
+$(document).ready(function() {
+//window.onload = async function () {
     //alert("pagina carregada com sucesso, verifique os seus dados pessoais.")
     let urlParams = new URLSearchParams(window.location.search);
     let recluseId = urlParams.has('id') ? urlParams.get('id') : 1;
@@ -17,7 +18,7 @@ window.onload = async function () {
         validator();
     });
     preencherListaDeReclusos();
-};
+});
 
 //validation function
 function validator() {

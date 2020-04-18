@@ -87,7 +87,7 @@
 
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
                                         <div class="modal" id="abrirModal">
-                                            <form id="formUser" name="formUser" class="user" action="servlet/newRecluse">
+                                            <form id="formUser" name="formUser" class="user" action="../../java/area51/servlets/newRecluse" method="post">
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Registo de Reclusos</h3>
@@ -95,25 +95,25 @@
                                                 <br>
                                                 <h5 align="center">
                                                     Nome:
-                                                        <input type="text" id="name" size="35" name="name">
+                                                        <input type="text" id="name1" size="35" name="name1">
                                                 </h5>
-                                                <h5 align="center">
-                                                    Morada:
-                                                        <input type="text" id="address" size="35" name="adress">
-                                                </h5>
+
                                                 <h5 align="center">
                                                     Data de nascimento:
-                                                        <input type="text" id="birth" size="35" name="date" placeholder="dd/mm/aaaa">
+                                                        <input type="text" id="birth" size="35" name="birthdate1" placeholder="dd/mm/aaaa">
                                                 </h5>
                                                 <h5 align="center">
                                                     Doenças:
-                                                    <input type="text" id="disease" size="50" name="disease">
+                                                    <input type="text" id="disease1" size="50" name="disease1">
                                                 </h5>
                                                 <h5 align="center">
                                                     Causa:
-                                                        <input type="text" id="cause" size="50" name="cause" >
+                                                        <input type="text" id="cause1" size="50" name="cause1" >
                                                 </h5>
-
+                                                <h5 align="center">
+                                                    Cela:
+                                                    <input type="text" id="cell1" size="50" name="cell1" >
+                                                </h5>
                                                 <div>
                                                    <h5>
                                                        Sexo:
@@ -181,56 +181,10 @@
                                 </div>
                                 <div class="form-group">
                                    Cela:
-                                    <input style="background-color: white" type="password" class="form-control form-control-user" name="cell" id="cell" disabled >
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="cell" id="cell" disabled >
                                 </div>
 
-                                <!--
-                                <div class="media stream">
-                                    <div class="media-body">
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                ID do Recluso:
-                                                <small>123343412</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Nome:
-                                                <small>Inês</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Data de nascimento:
-                                                <small>dd/mm/aaaa</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Sexo:
-                                                <small>Feminino</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Causa:
-                                                <small>sjdhfcbxnm</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Doenças:
-                                                <small>-------</small>
-                                            </h5>
-                                        </div>
-                                        <div class="stream-headline">
-                                            <h5 class="stream-author">
-                                                Cela:
-                                                <small>31</small>
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>-->
+
                 </form>
                                     <br>
                                     <center>
@@ -307,39 +261,45 @@
                                                         <h3 class="modal-title">Registo da Ocorrência</h3>
                                                     </div>
 <!--                                                    <br>-->
-                                                    <form id="registoOcorrencias" name="registoOcorrencias">
-                                                    <div class="modal-body">
-                                                        <div class="stream-headline1">
-
-                                                            <h5 align="center">
-                                                                Data:
-                                                                <input class="form-control form-control-user"  type="text" id="ocurrence_date" size="35" name="ocurrence_date" placeholder="dd/mm/aaaa">
-                                                            </h5>
-
-                                                            <h5 align="center">
-                                                                ID do Officer:
-                                                                <input class="form-control form-control-user" type = "text" id="id_officer" size="35" placeholder="-----" >
-                                                            </h5>
-                                                            <h5 align="center">
-                                                                Assunto:
-                                                                <input class="labelAssunto" type = "text" id="mytext" size="35" value="text here"/>
-                                                            </h5>
-                                                            <h5 align="center">
-                                                                Descrição:
-                                                                    <textarea class="labelDescricao" size="35" id= "myTextArea" rows="3" cols="80">Your Text here</textarea>
-                                                            </h5>
+                                                    <form method="post" action="/Area51/HistOccurrences" id="formNewOccurence">
+                                                        <div class="modal-body">
+                                                            <div class="stream-headline1">
+                                                                <h5 align="center">
+                                                                    Data:
+                                                                    <input class="form-control form-control-user"  type="date" id="ocurrence_date" size="35" name="ocurrence_date" placeholder="dd/mm/aaaa">
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Alerta:
+                                                                    <input class="form-control form-control-user" type = "text" id="id_alert" name="id_alert" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Officer:
+                                                                    <input class="form-control form-control-user" type = "number" id="id_officer" name="id_officer" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Recluso:
+                                                                    <input class="form-control form-control-user" type = "number" id="id_recluse" name="id_recluse" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    Assunto:
+                                                                    <input class="labelAssunto" type = "text" id="occu_subject" name="occu_subject" size="35" value="text here"/>
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    Descrição:
+                                                                    <textarea class="labelDescricao" size="35" id= "occu_description" name="occu_description" rows="3" cols="80">Your Text here</textarea>
+                                                                </h5>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
                                                         <div class="modal-footer">
-                                                            <a type="button" href="recluse.html" class="btn btn-danger" onclick="msg()" data-dismiss="modal">Registar</a>
-                                                            <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
+                                                            <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
+                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
+                                                                 -->
+                                                            <a class="btn btn-danger" href="#" onclick="$('#formNewOccurence').submit();">Registar</a>
+                                                            <a class="btn btn-danger" href="#">Cancelar</a>
+                                                            <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                    </form>
                                         <hr>
-                                        </form>
 
                                     <br>
                                       <!--  <button href="#visitasModal" id="buttons-hbox" type="button" class="btn btn-danger">
@@ -369,9 +329,10 @@
 <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="scripts/datatables/jquery.dataTables.js"></script>
-<script type="text/javascript" src="controllers/registoRecluse.controller.js"></script>
+<!--<script type="text/javascript" src="controllers/registoRecluse.controller.js"></script>-->
 <script type="text/javascript" src="controllers/dadosRecluso.controller.js"></script>
 <!--<script type="text/javascript" src="controllers/registoOcorrencias.controller.js"></script>-->
 <script type="text/javascript" src="controllers/historicoOcorrencias.controller.js"></script>
+<script type="text/javascript" src="controllers/AlertNotification.controller.js"></script>
 <script type="text/javascript" src="controllers/visits_recluse.controller.js"></script>
 </body>

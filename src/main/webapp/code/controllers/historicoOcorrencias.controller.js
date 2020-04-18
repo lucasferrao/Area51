@@ -1,4 +1,5 @@
 const serverHistOccurrences = '/Area51/HistOccurrences';
+
 $(document).ready(function() {
     $('.dataTables_paginate').addClass("btn-group datatable-pagination");
     $('.dataTables_paginate > a').wrapInner('<span />');
