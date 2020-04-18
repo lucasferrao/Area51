@@ -33,7 +33,6 @@ public class RecluseServlet extends HttpServlet {
             if(!resultSet.first()) {
                 resultSet.close();
                 statement.close();
-                conn.close();
                 return results;
             }
 
@@ -49,9 +48,6 @@ public class RecluseServlet extends HttpServlet {
                 }
                 if(statement != null) {
                     statement.close();
-                }
-                if(conn != null) {
-                    conn.close();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -76,7 +72,6 @@ public class RecluseServlet extends HttpServlet {
             if(!resultSet.first()) {
                 resultSet.close();
                 statement.close();
-                conn.close();
                 return results;
             }
 
@@ -92,9 +87,6 @@ public class RecluseServlet extends HttpServlet {
                 }
                 if(statement != null) {
                     statement.close();
-                }
-                if(conn != null) {
-                    conn.close();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

@@ -97,14 +97,6 @@ public class historicOccurrences extends HttpServlet {
         }
 
         try {
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            response.sendError(500);
-            return;
-        }
-
-        try {
             response.sendRedirect(request.getHeader("Referer"));
         } catch (IOException e) {
             e.printStackTrace();

@@ -86,7 +86,6 @@ public class alerts extends HttpServlet {
 
             rs.close();
             stmt.close();
-            conn.close();
 
             try {
                 numTries++;
@@ -123,7 +122,6 @@ public class alerts extends HttpServlet {
 
         rs.close();
         stmt.close();
-        conn.close();
     }
 
     protected void processMovement (HttpServletRequest request, HttpServletResponse response) throws IOException, SQLException {
@@ -144,10 +142,8 @@ public class alerts extends HttpServlet {
         stmt.setString(5, "1");
         stmt.executeUpdate();
         stmt.close();
-        conn.close();
 
         response.getWriter().println("{\"status\": \"ok\"}");
-        System.out.println("Movimento detetado em " + request.getParameter("lugar"));
     }
 
     /**

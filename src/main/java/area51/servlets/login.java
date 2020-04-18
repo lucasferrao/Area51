@@ -76,24 +76,24 @@ public class login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
-            PreparedStatement ps = con.prepareStatement("select id_officer_login,login_password from officer where userName=? and pass=?");
+            Connection con = DataBase.getConnection();
+            PreparedStatement ps = con.prepareStatement("select null from officer where id_officer_login=? and login_password=?");
             ps.setString(1, username);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                response.sendRedirect("success.html");
+            if (rs.next()) {
+                response.sendRedirect("code/index.html");
                 return;
             }
-            response.sendRedirect("error.html");
+            response.sendRedirect("index.html");
             return;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

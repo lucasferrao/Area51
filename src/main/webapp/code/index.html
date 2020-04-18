@@ -75,51 +75,51 @@
                         <div class="content">
                             <div class="btn-controls">
                                 <div class="btn-box-row row-fluid" >
-                                    <a id="camera" class="btn-box big span4" href="#modalCamera" ><i class=""></i>
+                                    <a id="camera1" name="camera1" class="btn-box big span4" href="#" onclick="showCameraInfo(1)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 1</p>
-                                    </p><a id="camera" href="#modalCamera" class="btn-box big span4"><i class=""></i>
+                                    </p><a id="camera2" name="camera2" href="#" class="btn-box big span4" onclick="showCameraInfo(2)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 2</p>
-                                    </a><a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    </a><a id="camera3" name="camera3" href="#" class="btn-box big span4" onclick="showCameraInfo(3)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 3</p>
                                     </a>
                                 </div>
-                                <div class="btn-box-row row-fluid"  data-toggle="modal" data-target="#modalCamera">
-                                    <a id="camera" class="btn-box big span4"><i class=""></i>
+                                <div class="btn-box-row row-fluid">
+                                    <a id="camera4" name="camera4" class="btn-box big span4" onclick="showCameraInfo(4)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 4</p>
-                                    </a><a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    </a><a id="camera5" name="camera5" href="#" class="btn-box big span4" onclick="showCameraInfo(5)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 5</p>
-                                    </a><a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    </a><a id="camera6" name="camera6" href="#" class="btn-box big span4" onclick="showCameraInfo(6)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 6</p>
                                     </a>
                                 </div>
                                 <div class="btn-box-row row-fluid">
-                                    <a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    <a id="camera7" name="camera7" href="#" class="btn-box big span4" onclick="showCameraInfo(7)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 7</p>
-                                    </a><a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    </a><a id="camera8" name="camera8" href="#" class="btn-box big span4" onclick="showCameraInfo(8)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 8</p>
-                                    </a><a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    </a><a id="camera9" name="camera9" href="#" class="btn-box big span4" onclick="showCameraInfo(9)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 9</p>
                                     </a>
                                 </div>
                                 <div class="btn-box-row row-fluid">
-                                    <a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    <a id="camera10" name="camera10" href="#" class="btn-box big span4" onclick="showCameraInfo(10)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 10</p>
                                 </a>
-                                    <a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    <a id="camera11" name="camera11" href="#" class="btn-box big span4" onclick="showCameraInfo(11)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 11</p>
                                     </a>
-                                    <a id="camera" href="#" class="btn-box big span4"><i class=""></i>
+                                    <a id="camera12" name="camera12" href="#" class="btn-box big span4" onclick="showCameraInfo(12)"><i class=""></i>
                                         <p class="text-muted">
                                             Câmara 12</p>
                                     </a>
@@ -139,16 +139,13 @@
                             <div class="modal-content">
                                 <div class="module-head">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h3 class="modal-title">Câmera - INFO</h3>
+                                    <h3 class="modal-title">Câmara - INFO</h3>
                                 </div>
                                 <div class="modal-body">
-                                    <p id="info">Info: </p>
-                                    <p id="place">Local: </p>
-                                    <p id="info">Data: </p>
-                                    <p id="info">Hora: </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" id="close" data-toggle="modal" data-target="#modalAlert">Fechar</button>
+                                    <p id="camera">Dispositivo: </p>
+                                    <p id="place">Localização: </p>
+                                    <p id="info">Reparações: </p>
+
                                 </div>
                             </div>
                         </div>
@@ -174,7 +171,8 @@
         <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
         <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
         <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="scripts/common.js" type="text/javascript"></script>
+<!--        <script src="scripts/common.js" type="text/javascript"></script>-->
         <script type="text/javascript" src="controllers/AlertNotification.controller.js"></script>
+        <script type="text/javascript" src="controllers/Camaras.controller.js"></script>
     </body>
 </html>

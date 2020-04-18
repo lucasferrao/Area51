@@ -24,15 +24,18 @@ public class DataBase {
     private static final String USER = "YrTGCBVRUv";
     private static final String PASS = "8hjO0RSz1p";
 
-    public static Connection getConnection() {
+    private static Connection connection;
 
+    public static Connection getConnection() {
         try {
+            if(connection != null && !connection.isClosed())
+                return connection;
+
             Class.forName(DRIVER);
-            return (Connection) DriverManager.getConnection(URL, USER, PASS);
+            return connection = DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException | SQLException ex) {
             throw new RuntimeException("Erro na conexão", ex);
         }
-
     }
 
     public static ArrayList<String> getDDate() {

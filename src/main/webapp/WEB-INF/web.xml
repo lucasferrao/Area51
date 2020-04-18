@@ -33,6 +33,11 @@
         <servlet-name>visits</servlet-name>
         <servlet-class>area51.servlets.visits</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>cameras</servlet-name>
+        <servlet-class>area51.servlets.CamerasServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -60,6 +65,11 @@
     <servlet-mapping>
         <servlet-name>visits</servlet-name>
         <url-pattern>/visits</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>cameras</servlet-name>
+        <url-pattern>/cameras</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
