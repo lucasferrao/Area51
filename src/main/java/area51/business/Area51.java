@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This is the project's main class.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 public class Area51 {
     //private Officer officerLoggedIn;
     private Map<Integer, Recluse> recluses;
@@ -43,28 +49,56 @@ public class Area51 {
         this.visits = (Map<Integer, Visit>) area51.getVisits();
     }
 
-    //Getters
+    /**
+     * Returns a list of recluses.
+     *
+     * @return all recluses
+     */
     public ArrayList<Recluse> getRecluses() {
         return (ArrayList<Recluse>) this.recluses;
     }
 
+    /**
+     * Returns a list of visitors.
+     *
+     * @return all visitors
+     */
     public ArrayList<Visitor> getVisitors() {
         return (ArrayList<Visitor>) this.visitors;
     }
 
+    /**
+     * Returns a list of visits.
+     *
+     * @return all visits
+     */
     public ArrayList<Visit> getVisits() {
         return (ArrayList<Visit>) this.visits;
     }
 
-    //Setters
+    /**
+     * Updates the list of all recluses.
+     *
+     * @param recluses a new list of recluses
+     */
     public void setRecluses(ArrayList<Recluse> recluses) {
         this.recluses = (Map<Integer, Recluse>) recluses;
     }
 
+    /**
+     * Updates the list of all visitors.
+     *
+     * @param visitors a new list of visitors
+     */
     public void setVisitors(ArrayList<Visitor> visitors) {
         this.visitors = (Map<Integer, Visitor>) visitors;
     }
 
+    /**
+     * Updates the list of all visits.
+     *
+     * @param visits a new list of visits
+     */
     public void setVisits(ArrayList<Visit> visits) {
         this.visits = (Map<Integer, Visit>) visits;
     }

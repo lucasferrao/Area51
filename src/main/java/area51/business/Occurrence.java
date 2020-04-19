@@ -3,6 +3,12 @@ package area51.business;
 import java.sql.Date;
 import java.time.Instant;
 
+/**
+ * This class is an occurrence made by a device or a officer.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 public class Occurrence {
     private String description;
     private String subject;
@@ -41,28 +47,56 @@ public class Occurrence {
         this.date = occurrence.getDate();
     }
 
-    //Getters
+    /**
+     * Returns a occurrence's description.
+     *
+     * @return a description
+     */
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     * Returns a occurrence's subject.
+     *
+     * @return a subject
+     */
     public String getSubject() {
         return this.subject;
     }
 
+    /**
+     * Returns a occurrence's date.
+     *
+     * @return a date
+     */
     public Date getDate() {
         return this.date;
     }
 
-    //Setters
+    /**
+     * Updates a occurrence's description.
+     *
+     * @param description a new occurrence's description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     * Updates a occurrence's subject.
+     *
+     * @param subject a new occurrence's subject
+     */
     public void setSubject(String subject) {
         this.subject = subject;
     }
 
+    /**
+     * Updates a occurrence's date.
+     *
+     * @param date a new occurrence's date
+     */
     public void setDate(Date date) {
         this.date = date;
     }

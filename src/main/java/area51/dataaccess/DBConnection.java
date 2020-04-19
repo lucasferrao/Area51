@@ -15,7 +15,6 @@ import java.util.List;
  * @author A89262
  * @version 20200329
  */
-
 public class DBConnection {
     private Connection con;
     private Statement st;
@@ -248,6 +247,12 @@ public class DBConnection {
         return officer;
     }
 
+    /**
+     * Method that gives data from a visitor.
+     *
+     * @param id_visitor visitor's id.
+     * @return visitor's data
+     */
     public Visitor getVisitorDataByID(int id_visitor){
         Visitor visitor = new Visitor();
 
@@ -272,6 +277,12 @@ public class DBConnection {
         return visitor;
     }
 
+    /**
+     * Method that gives data from a visit.
+     *
+     * @param id_visit visit's id.
+     * @return visit's data
+     */
     public Visit getVisitDataByID(int id_visit){
         Visit visit = new Visit();
 
@@ -298,8 +309,13 @@ public class DBConnection {
         return visit;
     }
 
-
-        public Device getDeviceDataByID(int id_device){
+    /**
+     * Method that gives data from a device.
+     *
+     * @param id_device device's id.
+     * @return device's data
+     */
+    public Device getDeviceDataByID(int id_device){
         Device device = new Device();
 
         try{
@@ -328,7 +344,12 @@ public class DBConnection {
         return device;
     }
 
-
+    /**
+     * Method that gives data from a alert.
+     *
+     * @param id_alert alert's id.
+     * @return alert's data
+     */
     public Alert getAlertDataByID(int id_alert){
         Alert alert = new Alert();
 
@@ -355,6 +376,12 @@ public class DBConnection {
         return alert;
     }
 
+    /**
+     * Method that gives data from a occurrence.
+     *
+     * @param id_occurrence occurrence's id.
+     * @return occurrence's data
+     */
     public Occurrence getOccurrenceDataByID(int id_occurrence){
         Occurrence occurrence = new Occurrence();
 
@@ -379,6 +406,9 @@ public class DBConnection {
         return occurrence;
     }
 
+    /**
+     * Method that gives data from a occurrence by alert.
+     */
     public void getOccurrenceByAlertData(){
         try{
             String query = "SELECT * FROM occurrence_by_alert";

@@ -9,7 +9,6 @@ import java.time.LocalDate;
  * @author A89262
  * @version 20200329
  */
-
 public class Recluse {
     private String recluseName;
     private LocalDate birthdate;

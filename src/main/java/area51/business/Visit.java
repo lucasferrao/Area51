@@ -4,6 +4,12 @@ import java.sql.Time;
 import java.time.Instant;
 import java.util.Date;
 
+/**
+ * This class gives the recluse's visit time information.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 public class Visit {
     private Date date;
     private Time checkin;
@@ -42,28 +48,56 @@ public class Visit {
         this.checkout = visit.getCheckout();
     }
 
-    //Getters
+    /**
+     * Returns a visit's date.
+     *
+     * @return a date
+     */
     public Date getDate() {
         return this.date;
     }
 
+    /**
+     * Returns a visit's checkin.
+     *
+     * @return a checkin
+     */
     public Time getCheckin() {
         return this.checkin;
     }
 
+    /**
+     * Returns a visit's checkout.
+     *
+     * @return a checkout
+     */
     public Time getCheckout() {
         return this.checkout;
     }
 
-    //Setters
+    /**
+     * Updates a visit's date.
+     *
+     * @param date a new visit's date
+     */
     public void setDate(Date date) {
         this.date = date;
     }
 
+    /**
+     * Updates a visit's checkin.
+     *
+     * @param checkin a new visit's checkin
+     */
     public void setCheckin(Time checkin) {
         this.checkin = checkin;
     }
 
+    /**
+     * Updates a visit's checkout.
+     *
+     * @param checkout a new visit's checkout
+     */
     public void setCheckout(Time checkout) {
         this.checkout = checkout;
     }

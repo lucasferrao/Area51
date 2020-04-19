@@ -11,29 +11,37 @@ public class main {
             /**
              * Get recluse's date from database.
              **/
-            //String recluse = connect.getRecluseDataByID(1).toString();
-            //System.out.println(recluse);
+            /**
+            String recluse = connect.getRecluseDataByID(1).toString();
+            System.out.println(recluse);
+             **/
 
             /**
              * Get officer's data from database.
              **/
-            //String officer = connect.getOfficerDataByID(1).toString();
-            //System.out.println(officer);
+            /**
+            String officer = connect.getOfficerDataByID(1).toString();
+            System.out.println(officer);
+             **/
 
 
         /**
          * Update recluse
          */
-        //String recluse2 = connect.updateRecluseDataByID(1, "Lucas", 1998-15-08,
-          //     "masculino", "Não", "Atropelou uma velha", "000").toString();
+        /**
+        String recluse2 = connect.updateRecluseDataByID(1, "Lucas", LocalDate.ofEpochDay(1999-10-01),
+               "masculino", "Não", "roubo", "A10").toString();
+         **/
 
 
         /**
          * Create recluse
          */
-      // Recluse newRecluse = connect.newRecluse("Lenda", LocalDate.now(), "masculino", "Sim",
-        //       "Roubo", "A20");
-       //System.out.println(newRecluse);
+        /**
+       Recluse newRecluse = connect.newRecluse("Lenda", LocalDate.now(), "masculino", "Sim",
+               "Roubo", "A20");
+       System.out.println(newRecluse);
+         **/
 
 
         /**
@@ -52,8 +60,18 @@ public class main {
 
 
 
-        //String visitor = connect.getVisitorDataByID(1).toString();
-        //System.out.println(visitor);
+
+
+
+
+
+        /**
+         * Get data from a table
+         */
+        /**
+        String visitor = connect.getVisitorDataByID(1).toString();
+        System.out.println(visitor);
+         **/
 
 
     }
