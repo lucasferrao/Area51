@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Área 51</title>
+        <link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link type="text/css" href="css/theme.css" rel="stylesheet">
+        <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel="stylesheet">
+    </head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><img src="images/logo-area51.jpg" alt="" title="" /></a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <ul class="nav pull-left">
+                    <li><a class="border" href="index.html">Câmaras</a></li>
+                    <li><a class="border" href="recluse.html">Reclusos </a></li>
+                    <li><a class="border" href="visits.html">Visitas </a></li>
+                    <li><a class="border" href="alerts.html"> Alertas </a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a class="border" href="login.html">Logout</a></li>
+                </ul>
+                <ul class="nav pull-date">
+                    <h5  class="nav pull-date1" id="date"></h5>
+
+                    <script>
+                        n =  new Date();
+                        y = n.getFullYear();
+                        m = n.getMonth() + 1;
+                        d = n.getDate();
+                        document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+                    </script>
+                </ul>
+                <ul class="nav pull-hours">
+                    <body onload="startTime()">
+
+                    <h5 class="nav pull-hours1" id="txt"></h5>
+                    <script>
+                        function startTime() {
+                            var today = new Date();
+                            var h = today.getHours();
+                            var m = today.getMinutes();
+                            var s = today.getSeconds();
+                            m = checkTime(m);
+                            s = checkTime(s);
+                            document.getElementById('txt').innerHTML =
+                                h + ":" + m + ":" + s;
+                            var t = setTimeout(startTime, 500);
+                        }
+                        function checkTime(i) {
+                            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                            return i;
+                        }
+                    </script>
+                </ul>
+            </div>
+            <!-- /.nav-collapse -->
+        </div>
+    </div>
+    <!-- /navbar-inner -->
+</div>
+
+<div class="wrapper">
+    <div class="container">
+
+        <div class="content">
+
+            <div class="module">
+
+                <div class="module">
+                    <div class="module-head">
+                        <h3>Visitas a Decorrer no Momento</h3>
+                    </div>
+                    <div class="module-body table">
+                        <table id="dataTableVisits" cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered display" width="100%">
+                            <thead>
+                            <tr style="background-color:#800000">
+                                <th style="color:#ffffff">#</th>
+                                <th style="color:#ffffff">ID do Recluso</th>
+                                <th style="color:#ffffff">Nome do Visitante</th>
+                                <th style="color:#ffffff">Identificação do Visitante</th>
+                                <th style="color:#ffffff">Hora de Entrada</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="color:black">35647</td>
+                                <td style="color:black">José Rodrigues</td>
+                                <td style="color:black">128356628</td>
+                                <td style="color:black">14:00</td>
+                            </tr>
+
+                            </tbody>
+
+
+                        </table>
+                    </div>
+                </div><!--/.module-->
+
+                <br />
+
+            </div><!--/.content-->
+
+        </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <div class="footer">
+        <div class="container">
+
+
+            <b class="copyright">&copy; 2020 Área51 </b> All rights reserved.
+        </div>
+    </div>
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery-ui-1.10.1.custom.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/datatables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="controllers/visits.controller.js"></script>
+<script type="text/javascript" src="controllers/AlertNotification.controller.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.datatable-1').dataTable();
+            $('.dataTables_paginate').addClass("btn-group datatable-pagination");
+            $('.dataTables_paginate > a').wrapInner('<span />');
+            $('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
+            $('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
+        } );
+    </script>
+</body>

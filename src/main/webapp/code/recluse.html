@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área 51</title>
+    <link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link type="text/css" href="css/theme.css" rel="stylesheet">
+    <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel="stylesheet">
+</head>
+<body onload="startTime()">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html"><img src="images/logo-area51.jpg" alt="" title="" /></a>
+<!--            <div class="nav-collapse collapse navbar-inverse-collapse">-->
+            <ul class="nav pull-left">
+                    <li><a class="border" href="index.html">Câmaras</a></li>
+                    <li><a class="border" href="recluse.html">Reclusos </a></li>
+                    <li><a class="border" href="visits.html">Visitas </a></li>
+                    <li><a class="border" href="alerts.html"> Alertas </a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a class="border" href="login.html">Logout</a></li>
+                </ul>
+                <ul class="nav pull-date">
+                    <h5  class="nav pull-date1" id="date"></h5>
+
+                    <script>
+                        n =  new Date();
+                        y = n.getFullYear();
+                        m = n.getMonth() + 1;
+                        d = n.getDate();
+                        document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+                    </script>
+                </ul>
+                <ul class="nav pull-hours">
+                    <ul onload="startTime()">
+
+                    <h5 class="nav pull-hours1" id="txt"></h5>
+                    <script>
+                        function startTime() {
+                            var today = new Date();
+                            var h = today.getHours();
+                            var m = today.getMinutes();
+                            var s = today.getSeconds();
+                            m = checkTime(m);
+                            s = checkTime(s);
+                            document.getElementById('txt').innerHTML =
+                                h + ":" + m + ":" + s;
+                            var t = setTimeout(startTime, 500);
+                        }
+                        function checkTime(i) {
+                            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                            return i;
+                        }
+                    </script>
+                    </ul>
+            </div>
+            <!-- /.nav-collapse -->
+        </div>
+    </div>
+    <!-- /navbar-inner -->
+</div>
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="span3" style="width:400px; height:400px;" align="left">
+                <div class="sidebar" style="width:300px; height:400px;">
+                            <form class="navbar-search pull-left input-append" action="#" >
+                                <input type="text" class="span3">
+                                <button class="btn btn-danger" type="button" >
+                                    <i class="icon-search"></i>
+                                </button>
+                            </form>
+
+                                    <ul class="btn-box big span3">
+                                        <span id="listaDeReclusos"></span>
+
+                                        <!-- registar novo recluso- janela modal -->
+
+                                        <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
+                                        <div class="modal" id="abrirModal">
+                                            <form id="formUser" name="formUser" class="user" action="../../java/area51/servlets/newRecluse" method="post">
+                                                <div class="module-head">
+                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                    <h3 class="modal-title">Registo de Reclusos</h3>
+                                                </div>
+                                                <br>
+                                                <h5 align="center">
+                                                    Nome:
+                                                        <input type="text" id="name1" size="35" name="name1">
+                                                </h5>
+
+                                                <h5 align="center">
+                                                    Data de nascimento:
+                                                        <input type="text" id="birth" size="35" name="birthdate1" placeholder="dd/mm/aaaa">
+                                                </h5>
+                                                <h5 align="center">
+                                                    Doenças:
+                                                    <input type="text" id="disease1" size="50" name="disease1">
+                                                </h5>
+                                                <h5 align="center">
+                                                    Causa:
+                                                        <input type="text" id="cause1" size="50" name="cause1" >
+                                                </h5>
+                                                <h5 align="center">
+                                                    Cela:
+                                                    <input type="text" id="cell1" size="50" name="cell1" >
+                                                </h5>
+                                                <div>
+                                                   <h5>
+                                                       Sexo:
+                                                       <input type="radio" id="f" name="male" value="male" >Masculino
+                                                       <input type="radio" id="m" name="feminino" VALUE="feminino">Feminino
+                                                   </h5>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a type="button" href="recluse.html" class="btn btn-danger" onclick="msg()" data-dismiss="modal">Guardar Dados</a>
+                                                    <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</a>
+                                                </div>
+                                                        <script>
+                                                            function msg() {
+                                                                alert("Dados guardados com sucesso!");
+                                                            }
+                                                        </script>
+                                            </form>
+                                        </div>
+                                    </ul>
+                </div>
+            </div>
+
+            <div class="span9" style="width:700px; height:600px;" >
+               <div class="content">
+                    <div class="module">
+                        <div class="module-head">
+                            <h3>Dados Dos Reclusos</h3>
+                        </div>
+                        <div class="module-body">
+                            <div class="stream-composer media">
+                                <center>
+                                    <a href="recluse.html">
+                                        <img src="images/perfil.jpg" width="120px" align="center">
+                                    </a>
+                                </center>
+                            </div>
+                            <br>
+                            <div id="result"></div>
+                            <form id="dadosRecluso" name="dadosReclcuso">
+
+                                <div class="form-group">
+                                    ID do Recluso:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="id_recluse" id="id_recluse" disabled>
+                                </div>
+                                <div class="form-group">
+                                    Nome:
+                                    <input style="background-color: white" type="email" class="form-control form-control-user" name="name" id="name" disabled>
+                                </div>
+                                <div class="form-group">
+                                  Data de nascimento:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="birthdate" id="birthdate" disabled>
+
+                                </div>
+                                <div class="form-group">
+                                   Sexo:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="genre" id="genre" disabled>
+                                </div>
+                                <div class="form-group">
+                                    Causa:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="cause" id="cause" disabled>
+                                </div>
+                                <div class="form-group">
+                                   Doenças:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="disease" id="disease" disabled>
+                                </div>
+                                <div class="form-group">
+                                   Cela:
+                                    <input style="background-color: white" type="text" class="form-control form-control-user" name="cell" id="cell" disabled >
+                                </div>
+
+
+                </form>
+                                    <br>
+                                    <center>
+                                                                        <!-- HISTORICO -->
+<!--                                        <button  >-->
+                                            <a type="button" class="btn btn-danger" id="aHistoricoVisitas" href=""> Histórico de Visitas  </a>
+                                        </button>
+                                        <a class="btn btn-danger" id="buttons-hbox" type="button" href="#historicoModal">Histórico de Ocorrências </a>
+                                        <div class="modal" id="historicoModal">
+                                                <div class="module-head">
+                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                    <h3 class="modal-title">Histórico de Ocorrências</h3>
+                                                </div>
+                                                        <hr>
+                                            <div class="module">
+                                                            <div class="module-body table">
+                                                                <table id="dataTableHistoricoOcorrencias" cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered display" width="100%">
+                                                                    <thead>
+                                                                    <tr style="background-color:#800000">
+                                                                        <th style="color: #ffffff " >#</th>
+                                                                        <th style="color: #ffffff">Data</th>
+                                                                        <th style="color: #ffffff">Tipo do Alerta</th>
+                                                                        <th style="color: #ffffff">Descrição</th>
+                                                                    </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                    <!--<tr style="background-color:white">
+                                                                        <td style="color: black"> 03/02/2020 </td>
+                                                                        <td style="color: black">22:00</td>
+                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
+                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                    <tbody>
+                                                                    <tr style="background-color:white">
+                                                                        <td style="color: black"> 08/02/2020 </td>
+                                                                        <td style="color: black">20:00</td>
+                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
+                                                                        <td style="color: black">11-01-23-15:30.pdf</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                    <tbody>
+                                                                    <tr style="background-color:white">
+                                                                        <td style="color: black"> 03/06/2020 </td>
+                                                                        <td style="color: black">12:00</td>
+                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
+                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                    <tbody>
+                                                                    <tr style="background-color:white">
+                                                                        <td style="color: black"> 13/02/2020 </td>
+                                                                        <td style="color: black">16:00</td>
+                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
+                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
+                                                                    </tr>-->
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="modal-footer">
+                                                                    <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Voltar</a>
+                                                                    <!-- Teste -->
+                                                                </div>
+                                                            </div>
+                                                        </div><!--/.module-->
+                                                    </div>
+
+                                                            <!-- >Registo de ocorrências -->
+
+                                        <a class="btn btn-danger" type="button" id="buttons-hbox" href="#ocorrenciasModal">Registar Ocorrência </a>
+                                        <div class="modal" id="ocorrenciasModal">
+                                                <div class="modal-content">
+                                                    <div class="module-head">
+                                                        <a href="#fechar" title="Fechar" class="fechar">x</a>
+                                                        <h3 class="modal-title">Registo da Ocorrência</h3>
+                                                    </div>
+<!--                                                    <br>-->
+                                                    <form method="post" action="/Area51/HistOccurrences" id="formNewOccurence">
+                                                        <div class="modal-body">
+                                                            <div class="stream-headline1">
+                                                                <h5 align="center">
+                                                                    Data:
+                                                                    <input class="form-control form-control-user"  type="date" id="ocurrence_date" size="35" name="ocurrence_date" placeholder="dd/mm/aaaa">
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Alerta:
+                                                                    <input class="form-control form-control-user" type = "text" id="id_alert" name="id_alert" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Officer:
+                                                                    <input class="form-control form-control-user" type = "number" id="id_officer" name="id_officer" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    ID do Recluso:
+                                                                    <input class="form-control form-control-user" type = "number" id="id_recluse" name="id_recluse" size="35" placeholder="-----" >
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    Assunto:
+                                                                    <input class="labelAssunto" type = "text" id="occu_subject" name="occu_subject" size="35" value="text here"/>
+                                                                </h5>
+                                                                <h5 align="center">
+                                                                    Descrição:
+                                                                    <textarea class="labelDescricao" size="35" id= "occu_description" name="occu_description" rows="3" cols="80">Your Text here</textarea>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <!--     <button type="button" class="btn btn-danger" onclick="msg()" data-dismiss="modal" href="index.html">Registar</button>
+                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal" href="index.html">Cancelar</button>
+                                                                 -->
+                                                            <a class="btn btn-danger" href="#" onclick="$('#formNewOccurence').submit();">Registar</a>
+                                                            <a class="btn btn-danger" href="#">Cancelar</a>
+                                                            <!-- <button type="button" class="btn btn-registo" data-dismiss="modal"> Apenas bloquear</button> -->
+                                                        </div>
+                                                    </form>
+                                        <hr>
+
+                                    <br>
+                                      <!--  <button href="#visitasModal" id="buttons-hbox" type="button" class="btn btn-danger">
+                                            <a id="visitasModal" href="visits.html" >Visitas</a>
+                                        </button>-->
+                                    </center>
+
+                        </div><!--/.module-body-->
+                    </div><!--/.module-->
+               </div><!--content-->
+            </div><!--span9-->
+        </div><!--row-->
+    </div><!--container-->
+</div><!--wrapper-->
+</div>
+
+
+
+
+<div class="footer">
+    <div class="container" >
+        <b class="copyright" align="left">&copy; 2020 Área51 </b> All rights reserved.
+    </div>
+</div>
+
+<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="scripts/datatables/jquery.dataTables.js"></script>
+<!--<script type="text/javascript" src="controllers/registoRecluse.controller.js"></script>-->
+<script type="text/javascript" src="controllers/dadosRecluso.controller.js"></script>
+<!--<script type="text/javascript" src="controllers/registoOcorrencias.controller.js"></script>-->
+<script type="text/javascript" src="controllers/historicoOcorrencias.controller.js"></script>
+<script type="text/javascript" src="controllers/AlertNotification.controller.js"></script>
+<script type="text/javascript" src="controllers/visits_recluse.controller.js"></script>
+</body>
