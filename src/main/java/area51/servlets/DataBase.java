@@ -104,7 +104,7 @@ public class DataBase {
 
         try {
 
-            String sql = "SELECT id_occurrence, occurrence_date, occurrence_subject, occurrence_description FROM occurrence"
+            String sql = "SELECT id_recluse, id_occurrence, occurrence_date, occurrence_subject, occurrence_description FROM occurrence"
                      + " WHERE id_recluse=?";
             stmt = conn.prepareStatement(sql);
             stmt.setString(1, recluseId);

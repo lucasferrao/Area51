@@ -87,12 +87,13 @@
 
                                         <a href="#abrirModal" type="button" id="buttons-hbox" class="btn btn-danger">Registar Reclusos</a>
                                         <div class="modal" id="abrirModal">
-                                            <form id="formUser" name="formUser" class="user" action="../../java/area51/servlets/newRecluse" method="post">
+                                            <!--<form id="formUser" name="formUser" class="user" action="newRecluse" method="post">-->
                                                 <div class="module-head">
                                                     <a href="#fechar" title="Fechar" class="fechar">x</a>
                                                     <h3 class="modal-title">Registo de Reclusos</h3>
                                                 </div>
-                                                <br>
+                                                <form method="post" action="/Area51/recluse" id="formNewRecluse">
+
                                                 <h5 align="center">
                                                     Nome:
                                                         <input type="text" id="name1" size="35" name="name1">
@@ -100,7 +101,7 @@
 
                                                 <h5 align="center">
                                                     Data de nascimento:
-                                                        <input type="text" id="birth" size="35" name="birthdate1" placeholder="dd/mm/aaaa">
+                                                        <input type="date" id="birth" size="35" name="birthdate1" placeholder="dd/mm/aaaa">
                                                 </h5>
                                                 <h5 align="center">
                                                     Doenças:
@@ -117,8 +118,8 @@
                                                 <div>
                                                    <h5>
                                                        Sexo:
-                                                       <input type="radio" id="f" name="male" value="male" >Masculino
-                                                       <input type="radio" id="m" name="feminino" VALUE="feminino">Feminino
+                                                       <input type="radio" id="f" name="genre" value="Masculino">Masculino
+                                                       <input type="radio" id="m" name="genre" value="Feminino">Feminino
                                                    </h5>
                                                 </div>
                                                 <div class="modal-footer">
@@ -127,6 +128,7 @@
                                                 </div>
                                                         <script>
                                                             function msg() {
+                                                                $("#formNewRecluse").submit();
                                                                 alert("Dados guardados com sucesso!");
                                                             }
                                                         </script>
@@ -192,64 +194,65 @@
 <!--                                        <button  >-->
                                             <a type="button" class="btn btn-danger" id="aHistoricoVisitas" href=""> Histórico de Visitas  </a>
                                         </button>
-                                        <a class="btn btn-danger" id="buttons-hbox" type="button" href="#historicoModal">Histórico de Ocorrências </a>
-                                        <div class="modal" id="historicoModal">
-                                                <div class="module-head">
-                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>
-                                                    <h3 class="modal-title">Histórico de Ocorrências</h3>
-                                                </div>
-                                                        <hr>
-                                            <div class="module">
-                                                            <div class="module-body table">
-                                                                <table id="dataTableHistoricoOcorrencias" cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered display" width="100%">
-                                                                    <thead>
-                                                                    <tr style="background-color:#800000">
-                                                                        <th style="color: #ffffff " >#</th>
-                                                                        <th style="color: #ffffff">Data</th>
-                                                                        <th style="color: #ffffff">Tipo do Alerta</th>
-                                                                        <th style="color: #ffffff">Descrição</th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                    <!--<tr style="background-color:white">
-                                                                        <td style="color: black"> 03/02/2020 </td>
-                                                                        <td style="color: black">22:00</td>
-                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
-                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                    <tbody>
-                                                                    <tr style="background-color:white">
-                                                                        <td style="color: black"> 08/02/2020 </td>
-                                                                        <td style="color: black">20:00</td>
-                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
-                                                                        <td style="color: black">11-01-23-15:30.pdf</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                    <tbody>
-                                                                    <tr style="background-color:white">
-                                                                        <td style="color: black"> 03/06/2020 </td>
-                                                                        <td style="color: black">12:00</td>
-                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
-                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                    <tbody>
-                                                                    <tr style="background-color:white">
-                                                                        <td style="color: black"> 13/02/2020 </td>
-                                                                        <td style="color: black">16:00</td>
-                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>
-                                                                        <td style="color: black">11-12-23-15:30.pdf</td>
-                                                                    </tr>-->
-                                                                    </tbody>
-                                                                </table>
-                                                                <div class="modal-footer">
-                                                                    <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Voltar</a>
-                                                                    <!-- Teste -->
-                                                                </div>
-                                                            </div>
-                                                        </div><!--/.module-->
-                                                    </div>
+                                            <a type="button" class="btn btn-danger" id="aHistoricoOcorrencias" href=""> Histórico de Ocorrências</a>
+<!--                                        <a class="btn btn-danger" id="buttons-hbox" type="button" href="#historicoModal">Histórico de Ocorrências </a>-->
+<!--                                        <div class="modal" id="historicoModal">-->
+<!--                                                <div class="module-head">-->
+<!--                                                    <a href="#fechar" title="Fechar" class="fechar">x</a>-->
+<!--                                                    <h3 class="modal-title">Histórico de Ocorrências</h3>-->
+<!--                                                </div>-->
+<!--                                                        <hr>-->
+<!--                                            <div class="module">-->
+<!--                                                            <div class="module-body table">-->
+<!--                                                                <table id="dataTableHistoricoOcorrencias" cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered display" width="100%">-->
+<!--                                                                    <thead>-->
+<!--                                                                    <tr style="background-color:#800000">-->
+<!--                                                                        <th style="color: #ffffff " >#</th>-->
+<!--                                                                        <th style="color: #ffffff">Data</th>-->
+<!--                                                                        <th style="color: #ffffff">Tipo do Alerta</th>-->
+<!--                                                                        <th style="color: #ffffff">Descrição</th>-->
+<!--                                                                    </tr>-->
+<!--                                                                    </thead>-->
+<!--                                                                    <tbody>-->
+<!--                                                                    &lt;!&ndash;<tr style="background-color:white">-->
+<!--                                                                        <td style="color: black"> 03/02/2020 </td>-->
+<!--                                                                        <td style="color: black">22:00</td>-->
+<!--                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>-->
+<!--                                                                        <td style="color: black">11-12-23-15:30.pdf</td>-->
+<!--                                                                    </tr>-->
+<!--                                                                    </tbody>-->
+<!--                                                                    <tbody>-->
+<!--                                                                    <tr style="background-color:white">-->
+<!--                                                                        <td style="color: black"> 08/02/2020 </td>-->
+<!--                                                                        <td style="color: black">20:00</td>-->
+<!--                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>-->
+<!--                                                                        <td style="color: black">11-01-23-15:30.pdf</td>-->
+<!--                                                                    </tr>-->
+<!--                                                                    </tbody>-->
+<!--                                                                    <tbody>-->
+<!--                                                                    <tr style="background-color:white">-->
+<!--                                                                        <td style="color: black"> 03/06/2020 </td>-->
+<!--                                                                        <td style="color: black">12:00</td>-->
+<!--                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>-->
+<!--                                                                        <td style="color: black">11-12-23-15:30.pdf</td>-->
+<!--                                                                    </tr>-->
+<!--                                                                    </tbody>-->
+<!--                                                                    <tbody>-->
+<!--                                                                    <tr style="background-color:white">-->
+<!--                                                                        <td style="color: black"> 13/02/2020 </td>-->
+<!--                                                                        <td style="color: black">16:00</td>-->
+<!--                                                                        <td style="color: black">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>-->
+<!--                                                                        <td style="color: black">11-12-23-15:30.pdf</td>-->
+<!--                                                                    </tr>&ndash;&gt;-->
+<!--                                                                    </tbody>-->
+<!--                                                                </table>-->
+<!--                                                                <div class="modal-footer">-->
+<!--                                                                    <a href="#" type="button" class="btn btn-danger" data-dismiss="modal">Voltar</a>-->
+<!--                                                                    &lt;!&ndash; Teste &ndash;&gt;-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </div>&lt;!&ndash;/.module&ndash;&gt;-->
+<!--                                                    </div>-->
 
                                                             <!-- >Registo de ocorrências -->
 

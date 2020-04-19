@@ -8,6 +8,7 @@ $(document).ready(function() {
     refreshDadosRecluse(recluseId);
     validator();
     $("#aHistoricoVisitas").attr('href', 'visitsperRecluse.html?id=' + recluseId);
+    $("#aHistoricoOcorrencias").attr('href', 'occurrenceHist.html?id=' + recluseId);
 
     const dadosRecluso = document.getElementById('dadosRecluso');
     dadosRecluso.addEventListener('submit', function (e) {
