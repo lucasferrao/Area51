@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="08b4fb19-dd23-4a80-852b-d06094cb3e36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Area51/target/production/backend/Area51/business/Recluse.class" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/target/production/backend/Area51/business/Recluse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Area51/target/production/backend/Area51/dataaccess/Recluse.class" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/target/production/backend/Area51/dataaccess/Recluse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,36 +18,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="475" column="108" selection-start-line="475" selection-start-column="108" selection-end-line="475" selection-end-column="108" />
+            <state relative-caret-position="-7873">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4307#4316#0" expanded="true" />
-                <element signature="e#5478#5487#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/exceptions/WrongCredentialsException.java">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Alert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="646">
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="90" selection-end-column="7" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+                <element signature="e#1009#1010#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#1550#1551#0" expanded="true" />
+                <element signature="e#1588#1589#0" expanded="true" />
+                <element signature="e#1620#1621#0" expanded="true" />
+                <element signature="e#1658#1659#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +52,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Area51.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+            <state relative-caret-position="151">
+              <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="64" selection-end-column="7" />
+              <folding>
+                <element signature="e#2022#2023#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
+                <element signature="e#2146#2147#0" expanded="true" />
+                <element signature="e#2210#2211#0" expanded="true" />
+                <element signature="e#2264#2265#0" expanded="true" />
+                <element signature="e#2322#2323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Device.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="118" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Occurrence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,10 +99,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="561">
+              <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="169" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="81" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+              <folding>
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,29 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Officer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Area51Connection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="406">
+              <caret line="150" column="39" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -138,17 +170,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Area51/src/main/java/A51/business/Alert.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Alert.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Occurrence.java" />
         <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/OccurrenceByID.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/exceptions/WrongCredentialsException.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/main.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Alert.java" />
         <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Area51.java" />
         <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Device.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/exceptions/WrongCredentialsException.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Occurrence.java" />
         <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Officer.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/main.java" />
-        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java" />
+        <option value="$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java" />
       </list>
     </option>
   </component>
@@ -164,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,7 +266,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +279,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -309,17 +344,20 @@
       <workItem from="1585150786982" duration="5987000" />
       <workItem from="1585423404594" duration="22167000" />
       <workItem from="1585511937471" duration="15049000" />
+      <workItem from="1585569301068" duration="1075000" />
+      <workItem from="1586111287736" duration="730000" />
+      <workItem from="1587327904180" duration="4669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46230000" />
+    <option name="totallyTimeSpent" value="52704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11567164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -327,8 +365,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -362,96 +400,10 @@
     <entry file="file://$PROJECT_DIR$/Area51/src/main/java/A51/main.java" />
     <entry file="file://$PROJECT_DIR$/Area51/src/main/java/A51/business/Area51.java" />
     <entry file="file://$PROJECT_DIR$/Area51/src/main/java/A51/business/Alert.java" />
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Alert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Occurrence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="114" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/OccurrenceByID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/exceptions/WrongCredentialsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Officer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Area51.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -462,14 +414,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/Recluse.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/OccurrenceByID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/dataaccess/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="475" column="108" selection-start-line="475" selection-start-column="108" selection-end-line="475" selection-end-column="108" />
+        <state relative-caret-position="-7873">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4307#4316#0" expanded="true" />
-            <element signature="e#5478#5487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Area51.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="64" selection-end-column="7" />
+          <folding>
+            <element signature="e#2022#2023#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+            <element signature="e#2146#2147#0" expanded="true" />
+            <element signature="e#2210#2211#0" expanded="true" />
+            <element signature="e#2264#2265#0" expanded="true" />
+            <element signature="e#2322#2323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Alert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="90" selection-end-column="7" />
+          <folding>
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="118" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Occurrence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Officer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="150" column="39" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Recluse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="169" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="81" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Area51/src/main/java/Area51/business/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="71" column="37" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+          <folding>
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,6 +542,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

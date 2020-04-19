@@ -1,5 +1,11 @@
 package Area51.business;
 
+/**
+ * Represents the device that gives a alert.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 public class Device {
     private String type;
     private String model;
@@ -43,36 +49,74 @@ public class Device {
         this.repairHistory = device.getRepairHistory();
     }
 
-    //Getters
+    /**
+     * Returns a device's type.
+     *
+     * @return a type
+     */
     public String getType() {
         return this.type;
     }
 
+    /**
+     * Returns a device's model.
+     *
+     * @return a model
+     */
     public String getModel() {
         return this.model;
     }
 
+    /**
+     * Returns a device's location.
+     *
+     * @return a location
+     */
     public String getLocation() {
         return this.location;
     }
 
+    /**
+     * Returns a device's repair history.
+     *
+     * @return a repair history
+     */
     public String getRepairHistory() {
         return this.repairHistory;
     }
 
-    //Setters
+    /**
+     * Updates a device's type.
+     *
+     * @param type a new device's type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     * Updates a device's model.
+     *
+     * @param model a new device's model
+     */
     public void setModel(String model) {
         this.model = model;
     }
 
+    /**
+     * Updates a device's location.
+     *
+     * @param location a new device's location
+     */
     public void setLocation(String location) {
         this.location = location;
     }
 
+    /**
+     * Updates a device's repair history.
+     *
+     * @param repairHistory a new device's repair history
+     */
     public void setRepairHistory(String repairHistory) {
         this.repairHistory = repairHistory;
     }

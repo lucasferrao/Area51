@@ -1,7 +1,11 @@
 package Area51.business;
 
-import java.time.LocalDate;
-
+/**
+ * This is the class that gives the recluse's visitor information.
+ *
+ * @author A89262
+ * @version 20200329
+ */
 public class Visitor {
     private String name;
     private int nif;
@@ -35,20 +39,38 @@ public class Visitor {
         this.nif = visitor.getNif();
     }
 
-    //Getters
+    /**
+     * Returns a visitor's name.
+     *
+     * @return a name
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Returns a visitor's nif.
+     *
+     * @return a nif
+     */
     public int getNif() {
         return this.nif;
     }
 
-    //Setters
+    /**
+     * Updates a visitor's name.
+     *
+     * @param name a new visitor's name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Updates a visitor's nif.
+     *
+     * @param nif a new visitor's nif
+     */
     public void setNif(int nif) {
         this.nif = nif;
     }
