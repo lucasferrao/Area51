@@ -90,9 +90,13 @@ public class login extends HttpServlet {
             if (rs.next()) {
                 response.sendRedirect("code/index.html");
                 return;
+            } else {
+                out.println("<script type=\"text/javascript\">");
+                out.println(" alert('Os seus dados estão incorretos!');");
+                out.println("</script>");
+                response.sendRedirect("index.html");
+                return;
             }
-            response.sendRedirect("index.html");
-            return;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

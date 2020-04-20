@@ -116,5 +116,18 @@
 <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
 <script src="scripts/common.js" type="text/javascript"></script>
 <script src="controllers/login.controller.js"  type="text/javascript"></script>
+<script>
+    function valida()
+    {
+        if (formLogin.username.value == "") {
+            alert("Preencha todos os campos!");
+            formLogin.username.focus();
+            return false;
+        }else if(formLogin.username.value !== "17342" || formLogin.password.value !== "security17342"){
+
+            alert("Os seus dados estão incorretos!");
+        }
+    }
+</script>
 
 </html>
