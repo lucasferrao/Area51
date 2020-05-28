@@ -66,7 +66,7 @@ public class historicOccurrences extends HttpServlet {
 
             stmt.setString(1, occuDescription);
             stmt.setString(2, occuSubject);
-            stmt.setDate(3, Date.valueOf(LocalDate.parse(data)));
+            stmt.setDate(3, Date.valueOf(LocalDate.parse(data).plusDays(1)));
             stmt.setInt(4, Integer.parseInt(idRecluse));
             stmt.setInt(5, Integer.parseInt(idOfficer));
 

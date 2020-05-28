@@ -173,9 +173,13 @@
                             $(document).ready(function() {
                                 let urlParams = new URLSearchParams(window.location.search);
                                 let deviceId = urlParams.has('id_device') ? urlParams.get('id_device') : 1;
+                                let alertId = urlParams.has('id_alert') ? urlParams.get('id_alert') : 1;
                                 let hourAlert = urlParams.has('alert_hour') ? urlParams.get('alert_hour') : 1;
+                                let dateAlert = urlParams.has('alert_date') ? urlParams.get('alert_date') : 1;
 
                                 $("#idDevice,#idDevice1").html(deviceId);
+                                $("#id_alert").val(alertId);
+                                $("#ocurrence_date").val(dateAlert);
                                 $("#alert_hour").html(hourAlert);
 
                             });

@@ -12,7 +12,8 @@ function checkForAlerts() {
             // Recebido novo alerta! Processar o alerta.
             window.location.href = "/Area51/code/sensorMovementAlert.html?id_alert=" + alertJson.id_alert
                 + "&id_device=" + alertJson.id_device
-                + "&alert_hour=" + alertJson.alert_hour;
+                + "&alert_hour=" + alertJson.alert_hour
+                + "&alert_date=" + alertJson.alert_date;
         })
         .catch(() => {
             checkForAlerts();

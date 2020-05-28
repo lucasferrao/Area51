@@ -104,7 +104,7 @@ public class alerts extends HttpServlet {
             return;
         }
 
-        stmt = conn.prepareStatement("SELECT id_alert, id_device, alert_hour FROM alert ORDER BY `id_alert` DESC LIMIT 1");
+        stmt = conn.prepareStatement("SELECT id_alert, id_device, alert_hour, alert_date FROM alert ORDER BY `id_alert` DESC LIMIT 1");
         ResultSet rs = stmt.executeQuery();
 
         if (rs.next()) {
@@ -112,8 +112,11 @@ public class alerts extends HttpServlet {
 
             res.put("id_alert", String.valueOf(rs.getInt("id_alert")));
             res.put("id_device", String.valueOf(rs.getInt("id_device")));
+            res.put("alert_date", rs.getDate("alert_date")
+                    .toLocalDate().format(DateTimeFormatter.ISO_DATE));
             res.put("alert_hour", rs.getTime("alert_hour")
                     .toLocalTime().minusHours(1).format(DateTimeFormatter.ISO_TIME));
+
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
