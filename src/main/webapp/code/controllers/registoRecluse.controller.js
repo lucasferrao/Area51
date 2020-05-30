@@ -55,7 +55,7 @@ function saveRecluse()
     data.m = document.getElementById("m").value;
     console.log(data);
     //debugg
-            headeing
+            //headeing
             //send data to server via POST and PUT
             fetch(server,
                   {rs:
