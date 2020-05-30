@@ -59,8 +59,9 @@ public class RecluseServlet extends HttpServlet {
     protected void createNewRecluse (HttpServletRequest request, HttpServletResponse response) throws IOException {
         Connection conn = DataBase.getConnection();
         PreparedStatement stmt;
-
+        System.out.println("Olá eu estou aqui");
         try {
+
             String name = request.getParameter("name1");
             String birth = request.getParameter("birthdate1");
             String genre = request.getParameter("genre");
@@ -86,7 +87,8 @@ public class RecluseServlet extends HttpServlet {
             stmt.setString(5, cause);
             stmt.setString(6, cell);
 
-            stmt.executeUpdate();
+            System.out.println(stmt.executeUpdate());
+
 
             stmt.close();
         } catch(SQLException e) {
