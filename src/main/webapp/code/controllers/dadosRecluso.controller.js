@@ -118,7 +118,7 @@ async function preencherListaDeReclusos() {
     let text = "";
     for(let i = 0; i < idsReclusos.length; i++) {
         let id = idsReclusos[i];
-        text += '<li><a href="?id=' + id + '">Recluso ' + id + '</a></li>'
+        text += '<h4><a href="?id=' + id + '">Recluso ' + id + '</a></h4>'
     }
     $("#listaDeReclusos").html(text);
 }
